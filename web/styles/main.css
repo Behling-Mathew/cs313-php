@@ -1,0 +1,108 @@
+/* Home Page Styling */
+body {
+    background-color: #222629;
+    color: white;
+    color: #86c232;
+    font-family: 'Abel', sans-serif;
+}
+
+h1,
+h2 {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: solid 2px #86c232;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #6b6e70;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+figure {
+
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+
+figcaption {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.portal {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 10%;
+    border-radius: 10px;
+    border: solid 1px white;
+    background-color: #86c232;
+    padding: 5px;
+    font-weight: bold;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    min-width: 83px;
+
+}
+
+.portal a {
+    color: white;
+    text-decoration: none;
+}
+
+.portal:hover {
+    background-color: white;
+    color: #222629;
+}
+
+.basketball {
+
+    transition-duration: 7000ms;
+    transition-timing-function: cubic-bezier(.77, 0, .18, 1);
+}
+
+.basketball:hover {
+
+    transform: rotate(-2000deg);
+}
+
+#logo {
+    border-radius: 20px;
+    transition-delay: 500ms;
+    transition-duration: 3000ms;
+    transition-timing-function: ease-in-out;
+
+}
+
+#logo:hover {
+    width: 500px;
+    background-color: #86c232;
+
+
+}
+
+.ul-container  {
+    padding: 10px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.ul-container li {
+     padding: .5rem;
+     font-size: 1.3rem;
+    
+}

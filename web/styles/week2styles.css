@@ -1,0 +1,31 @@
+div {
+    padding: 40px;
+    margin-right: 20px;
+}
+
+.div1 {
+    font-size: 1.6rem;
+    background-color: lightgoldenrodyellow;
+}
+
+.div2 {
+    font-size: 1.8rem;
+    background-color: skyblue;
+}
+
+.div3 {
+    font-size: 2rem;
+    background-color: darkseagreen;
+}
+
+.div1:hover {
+    font-weight: bold;
+}
+
+.div2:hover {
+    font-weight: bold;
+}
+
+.div3:hover {
+    font-weight: bold;
+}
