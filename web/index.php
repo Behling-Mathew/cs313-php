@@ -3,7 +3,7 @@
 <html lang="en-us">
 
 <head>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/web/common/head.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/head.php'; ?>
     <title>Home | CS 313</title>
     <meta name="description" content="This is the home page for my CS 313 class which includes some of my interests.">
     

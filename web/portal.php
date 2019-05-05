@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/web/common/head.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/head.php'; ?>
     <title>CS 313 Assignment Portal | M Behling | BYU-Idaho</title>
     <meta name="description" content="Assignment portal page for M Behling in CS 313 at Brigham Young University-Idaho.">
     
