@@ -165,7 +165,7 @@ $emptyMessage = "<span class='red'>Your Cart is Empty</span>";
     <main>
         <div class="center">
             <h1>My Cart</h1>
-            <div class="portal"><a class="portal" href="portal.php">Portal Page</a></div>
+            <div class="portal"><a class="portal" href="../../portal.php">Portal Page</a></div>
             <div>
                 <p>Cart Status: <?php if (empty($_SESSION['cart'])){echo $emptyMessage;} ?> </p>
             </div>

@@ -28,7 +28,7 @@
     <main>
         <div class="center">
             <h1>Shop</h1>
-            <div class="portal"><a class="portal" href="/portal.php">Portal Page</a></div>
+            <div class="portal"><a class="portal" href="../../portal.php">Portal Page</a></div>
             <div>
                 <?php
                     if (isset($message)) {

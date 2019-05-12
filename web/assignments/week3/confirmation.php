@@ -45,7 +45,7 @@ function removeAll(){
     //$fishing = 0;
     
     session_destroy();
-    header("location: view-cart.php");
+    //header("location: view-cart.php");
     
 }
 
@@ -115,6 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = htmlspecialchars($_POST['city']);
     $state = $_POST['state'];
     $zip = htmlspecialchars($_POST['zip']);
+    removeAll();
 }
 
 
@@ -158,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
         <div class="center">
             <h1>On Its Way</h1>
-            <div class="portal"><a class="portal" href="portal.php">Portal Page</a></div>
+            <div class="portal"><a class="portal" href="../../portal.php">Portal Page</a></div>
             <div>
                 <p>Order: <?php if (empty($_SESSION['cart'])){echo $emptyMessage;} ?> </p>
             </div>
