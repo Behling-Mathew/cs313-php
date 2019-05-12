@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -6,7 +5,7 @@
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/head.php'; ?>
     <title>Home | CS 313</title>
     <meta name="description" content="This is the home page for my CS 313 class which includes some of my interests.">
-    
+
 </head>
 
 
@@ -61,7 +60,8 @@
 
     </main>
     <footer>
-        <p>&copy;2019 | M Behling | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> | <?php echo date('l, d F Y') ?></p>
+        <p>&copy;2019 | M Behling | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
+            <?php echo date('l, d F Y') ?></p>
     </footer>
 
 </body>

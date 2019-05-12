@@ -18,9 +18,9 @@
     <main>
         <div class="ul-container">
             <ul>
-                <li>01: <a href="#">Coming Soon</a></li>
-                <li>02: <a href="#">Coming Soon</a></li>
-                <li>03: <a href="#">Coming Soon</a></li>
+                <li>Week 01: <a href="hello.html">Hello, World!</a></li>
+                <li>Week 02: <a href="index.php">Home Page</a></li>
+                <li>Week 03: <a href="assignments/week3/browse.php">Shopping Cart</a></li>
                 <li>04: <a href="#">Coming Soon</a></li>
                 <li>05: <a href="#">Coming Soon</a></li>
                 <li>06: <a href="#">Coming Soon</a></li>
