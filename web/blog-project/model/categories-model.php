@@ -19,3 +19,13 @@ function getPlayers() {
     $stmt->closeCursor();
     return $playersArray; 
 }
+
+function getComments() {
+    $db = dbConnect();
+    $sql = 'SELECT user_first_name, user_last_name, comment_text, comment_date FROM comments INNER JOIN users ON users.user_id = comments.user_id';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $commentsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $commentsArray; 
+}

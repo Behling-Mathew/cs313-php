@@ -47,10 +47,10 @@
     
     <main>
        
-    <h2 class="players-heading">Players Page</h2>
+    <h2 class="players-heading">2019 Playoffs</h2>
 
 
-    <table id="players" class="table table-striped table-bordered" style="width:80%">
+    <!-- <table id="players" class="table table-striped table-bordered" style="width:80%">
         <thead>
             <tr>
                 <th>Portrait</th>
@@ -74,7 +74,11 @@
                 <th>Age</th>
             </tr>
         </tfoot>
-    </table> 
+    </table>  -->
+
+
+<img src="/blog-project/images/bracket.png" alt="2019 Playoffs Bracket" width="960">
+<h3>Who do you think will win?</h3>
 
 
 

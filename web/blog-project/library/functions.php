@@ -31,3 +31,16 @@ function buildPlayerTable($playersArray) {
     }
     return $id;
 }
+
+function buildCommentsTable($commentsArray) {
+    $ca = '';
+    foreach ($commentsArray as $x) {
+        $ca .= '<tr>';   
+        $ca .= '<td>' . $x['user_first_name'] . '</td>';
+        $ca .= '<td>' . $x['user_last_name'] . '</td>';
+        $ca .= '<td>' . $x['comment_text'] . '</td>';
+        $ca .= '<td>' . $x['comment_date'] . '</td>';
+        $ca .= '</tr>';
+    }
+    return $ca;
+}

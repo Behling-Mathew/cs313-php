@@ -56,11 +56,39 @@ INSERT INTO players(first_name, last_name, team, salary, age, img_path) VALUES
 ('Nikola', 'Jokic', 'Denver Nuggets', '$24,605,181', 24, '/blog-project/images/players/joker.png');
 
 
+-- Additional inserts after the fact
+INSERT INTO users(user_first_name, user_last_name, user_email, user_password) VALUES 
+('Tony', 'Stark', 'ironman@gmail.com', 'pepper123'),
+('Bruce', 'Banner', 'hulk@gmail.com', 'smash!'),
+('Peter', 'Quill', 'starlord@gmail.com', 'gamora<3'),
+('Steve', 'Rogers', 'captainamerica@gmail.com', 'america'),
+('Bucky', 'Barnes', 'wintersoldier@gmail.com', 'metalarm'),
+('Natasha', 'Romanoff', 'blackwidow@gmail.com', '123456'),
+('Stephen', 'Strange', 'drstrange@gmail.com', 'knowledge123');
+
+INSERT INTO comments(user_id, img_id, comment_text) VALUES 
+(2, 3, 'Curry is amazing! Golden State will win again.'),
+(3, 4, 'Even without Durant, Warriors are going to win.'),
+(4, 5, 'Giannis cannot handle the pressure.  Bucks are losing tonight.'),
+(5, 6, 'Can you believe that Kemba made 3rd all-nba over Klay even though he did not make the playoffs??!'),
+(6, 7, 'LeBron probably does not know what to do with himself this year.  This is his first time not going to the finals in like 7 years!!!'),
+(7, 8, 'Kawhi Leonard is the new best player in the world.  The Raptors are going to win it all and dethrone the Warriors!'),
+(8, 3, 'I have looked into the future and foreseen that Golden State will win the championship and Curry will be the Finals MVP.');
+
+SELECT * FROM 
+
 -- TESTING INSERTS INTO EACH TABLE -- 
 INSERT INTO categories(category_name)
 VALUES ('Utah Jazz');
 
-SELECT * FROM categories;
+SELECT 
+    user_first_name, 
+    user_last_name, 
+    comment_text, 
+    comment_date 
+FROM 
+    comments
+INNER JOIN users ON users.user_id = comments.user_id;
 
 -- DISPLAYS ------------------------------------------------------------------------------------------
 -- category_id | category_name

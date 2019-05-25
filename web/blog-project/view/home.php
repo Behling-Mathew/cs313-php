@@ -19,6 +19,14 @@ if (count($playersArray)) {
 } else {
     $playerDisplay = '<p>Sorry, no images could be found.</p>';
 }
+
+
+$commentsArray = getComments();
+if (count($commentsArray)) {
+  $commentsDisplay = buildCommentsTable($commentsArray);
+} else {
+  $commentsDisplay = '<p>Sorry, no comments could be found.</p>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,25 +76,21 @@ if (count($playersArray)) {
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Portrait</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Team</th>
-                <th>Salary</th>
-                <th>Age</th>
+                <th>Comments</th>
+                <th>Date</th>
             </tr>
         </thead>
         <tbody>
-          <?php echo $playerDisplay; ?> 
+          <?php echo $commentsDisplay; ?> 
         </tbody>
         <tfoot>
             <tr>
-                <th>Portrait</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Team</th>
-                <th>Salary</th>
-                <th>Age</th>
+                <th>Comments</th>
+                <th>Date</th>
             </tr>
         </tfoot>
     </table> 
