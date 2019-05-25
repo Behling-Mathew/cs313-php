@@ -62,6 +62,7 @@ if (count($imageArray)) {
     </header>
     
     <main>
+        <?php echo $imageDisplay; ?>
       
     </main>
     <footer>
