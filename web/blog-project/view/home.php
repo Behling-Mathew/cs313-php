@@ -69,7 +69,7 @@ if (count($playersArray)) {
     
     <main>
         
-        <table id="players" class="table table-striped table-bordered" style="width:80%">
+        <table id="example" class="table table-striped table-bordered" style="width:80%">
         <thead>
             <tr>
                 <th>Portrait</th>
@@ -104,6 +104,6 @@ if (count($playersArray)) {
   </body>
   <script>
   $(document).ready(function() {
-    $('#players').DataTable();
+    $('#example').DataTable();
 } ); </script>
 </html>
