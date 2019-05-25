@@ -14,4 +14,5 @@ function buildNav($categories) {
        $navList .= '</ul>';
        $navList .= '</div>';
        $navList .= '</div>';
+       return $navList;
 }
