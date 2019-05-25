@@ -4,27 +4,21 @@ require_once '../model/categories-model.php';
 require_once '../library/functions.php';
 
 $categories = getCategories();
-echo '<pre>';
-print_r($categories);
-echo '</pre>';
+//echo '<pre>';
+//print_r($categories);
+//echo '</pre>';
 
 $navList = buildNav($categories);
 
-
-
-
 $playersArray = getPlayers();
-echo '<pre>';
-print_r($playersArray);
-echo '</pre>';
+//echo '<pre>';
+//print_r($playersArray);
+//echo '</pre>';
 if (count($playersArray)) {
     $playerDisplay = buildPlayerTable($playersArray);
 } else {
     $playerDisplay = '<p>Sorry, no images could be found.</p>';
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +64,7 @@ if (count($playersArray)) {
     
     <main>
         
+     <h2 class="players-heading">Players Page</h2>
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
