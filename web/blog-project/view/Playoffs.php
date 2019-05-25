@@ -45,7 +45,7 @@ if (count($commentsArray)) {
         
      <h2 class="players-heading">Playoffs 2019</h2>
      <img src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
-     <h3>Who do you think will win?</h3>
+     <h3 class="players-heading">Who do you think will win?</h3>
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
