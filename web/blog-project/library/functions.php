@@ -16,3 +16,12 @@ function buildNav($categories) {
        $navList .= '</div>';
        return $navList;
 }
+
+function buildImageDisplay($imageArray) {
+    $id = '<div>';
+    foreach ($imageArray as $x) {
+        $id .= '<img class="player-image" src="' . $x['img_path'] . '" alt=Player image name:' . $x['img_name']; 
+    }
+    $id .= '</div>';
+    return $id;
+}

@@ -9,6 +9,19 @@ print_r($categories);
 echo '</pre>';
 
 $navList = buildNav($categories);
+
+
+
+
+$imgArray = getImages();
+if (count($imageArray)) {
+    $imageDisplay = buildImageDisplay($imageArray);
+} else {
+    $imageDisplay = '<p>Sorry, no images could be found.</p>';
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -9,3 +9,13 @@ function getCategories() {
     $stmt->closeCursor();
     return $categories;
 }
+
+function getImages() {
+    $db = dbConnect();
+    $sql = 'SELECT img_id, img_name, img_path FROM images;
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $imageArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $imageArray; 
+}
