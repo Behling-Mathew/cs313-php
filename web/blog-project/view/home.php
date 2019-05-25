@@ -1,8 +1,9 @@
 <?php
-require_once '/blog-project/library/connections.php';
-require_once '/blog-project/model/categories-model.php';
+require_once '../library/connections.php';
+require_once '../model/categories-model.php';
 
 $result = getCategories();
+var_dump($result);
 echo var_dump($result);
 ?>
 <!DOCTYPE html>
