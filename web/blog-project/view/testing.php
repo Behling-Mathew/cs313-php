@@ -46,7 +46,6 @@
 <style>
     body {
         max-width: 960px;
-        
         margin-left: auto;
         margin-right: auto;
     }
