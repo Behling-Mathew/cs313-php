@@ -19,14 +19,6 @@ if (count($playersArray)) {
 } else {
     $playerDisplay = '<p>Sorry, no images could be found.</p>';
 }
-
-
-$commentsArray = getComments();
-if (count($commentsArray)) {
-  $commentsDisplay = buildCommentsTable($commentsArray);
-} else {
-  $commentsDisplay = '<p>Sorry, no comments could be found.</p>';
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,54 +38,38 @@ if (count($commentsArray)) {
     <header>
     <h1 class="site-name">Sports Blog</h1>
       <nav>
-      
-      
       <?php echo $navList; ?>
-
-      <!-- <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
-      
-      <div class="menu-outer" id="nav-bar-hide">
-          
-          <div class="table">
-              
-              <ul class="main-nav" id="nav-hide">
-              
-                  <li><a class="active" href="/acme/home.php" title="ACME Home Page">Home</a></li>
-                  <li><a href="#" title="ACME Cannon Page">Cannon</a></li>
-                  <li><a href="#" title="ACME Explosive Page">Explosive</a></li>
-                  <li><a href="#" title="ACME Misc Page">Misc</a></li>
-                  <li><a href="#" title="ACME Rocket Page">Rocket</a></li>
-                  <li><a href="#" title="ACME Trap Page">Trap</a></li>
-              </ul>
-          </div>
-      </div> -->
     </nav>
     </header>
     
     <main>
         
-     <h2 class="players-heading">Players Page</h2>
+    <h2 class="players-heading">Welcome to the home page. This site is still being built, but has some features currently available.</h2>
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
+                <th>Portrait</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Comments</th>
-                <th>Date</th>
+                <th>Team</th>
+                <th>Salary</th>
+                <th>Age</th>
             </tr>
         </thead>
         <tbody>
-          <?php echo $commentsDisplay; ?> 
+          <?php echo $playerDisplay; ?> 
         </tbody>
         <tfoot>
             <tr>
+                <th>Portrait</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Comments</th>
-                <th>Date</th>
+                <th>Team</th>
+                <th>Salary</th>
+                <th>Age</th>
             </tr>
         </tfoot>
-    </table> 
+    </table>  
 
     </main>
     <footer>

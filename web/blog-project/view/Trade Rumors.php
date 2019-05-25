@@ -39,7 +39,6 @@ $navList = buildNav($categories);
     <script src="/blog-project/js/hamburger.js"></script>    
   </body>
   <script>
-  $(document).ready(function() {
-    $('#players').DataTable();
-} ); </script>
+  $(document).ready(function() {$('#players').DataTable();}
+    </script>
 </html>
