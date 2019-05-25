@@ -18,8 +18,9 @@ function buildNav($categories) {
 }
 
 function buildPlayerTable($playersArray) {
-    $id = '<tr>';
+    $id = '';
     foreach ($playersArray as $x) {
+        $id .= '<tr>';
         $id .= '<td><img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '"></td>';
         $id .= '<td>' . $x['first_name'] . '</td>';
         $id .= '<td>' . $x['last_name'] . '</td>';
@@ -28,8 +29,7 @@ function buildPlayerTable($playersArray) {
         $id .= '<td>' . $x['age'] . '</td>';
         $id .= '</tr>';
         $id .= '<tr>';
+        $id .= '</tr>';
     }
-    $id .= '</tr>';
-    
     return $id;
 }
