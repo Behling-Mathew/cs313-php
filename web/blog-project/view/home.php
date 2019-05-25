@@ -14,6 +14,9 @@ $navList = buildNav($categories);
 
 
 $imageArray = getImages();
+echo '<pre>';
+print_r($imageArray);
+echo '</pre>';
 if (count($imageArray)) {
     $imageDisplay = buildImageDisplay($imageArray);
 } else {
