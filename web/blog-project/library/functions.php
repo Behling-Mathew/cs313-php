@@ -17,7 +17,7 @@ function buildNav($categories) {
        return $navList;
 }
 
-function buildImageDisplay($playersArray) {
+function buildPlayerTable($playersArray) {
     $id = '<tr>';
     foreach ($playersArray as $x) {
         $id .= '<td><img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '"></td>';
@@ -30,19 +30,3 @@ function buildImageDisplay($playersArray) {
     $id .= '</tr>';
     return $id;
 }
-
-<tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-
-            <th>Portrait</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Team</th>
-                <th>Salary</th>
-                <th>Age</th>

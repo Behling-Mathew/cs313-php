@@ -18,7 +18,7 @@ echo '<pre>';
 print_r($playersArray);
 echo '</pre>';
 if (count($playersArray)) {
-    $playerDisplay = buildImageDisplay($playersArray);
+    $playerDisplay = buildPlayerTable($playersArray);
 } else {
     $playerDisplay = '<p>Sorry, no images could be found.</p>';
 }
