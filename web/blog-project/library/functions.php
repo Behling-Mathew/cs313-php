@@ -9,7 +9,7 @@ function buildNav($categories) {
     $navList .= '<li><a class="active" href="/blog-project/view/home.php" title="Home Page">Home</a></li>';
     
     foreach ($categories as $category) {
-        $navList .= "<li><a href='/blog-project/view/". $category[category_name] . "'.php" . " title='View the $category[category_name] page'>$category[category_name]</a></li>";
+        $navList .= "<li><a href='/blog-project/view/". $category[category_name] . ".php'" . " title='View the $category[category_name] page'>$category[category_name]</a></li>";
     }          
        $navList .= '</ul>';
        $navList .= '</div>';
