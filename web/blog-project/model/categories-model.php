@@ -12,7 +12,7 @@ function getCategories() {
 
 function getPlayers() {
     $db = dbConnect();
-    $sql = 'SELECT player_id, first_name, last_path, team, salary, age, img_path FROM players';
+    $sql = 'SELECT player_id, first_name, last_name, team, salary, age, img_path FROM players';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $playersArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
