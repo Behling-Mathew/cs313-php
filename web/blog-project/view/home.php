@@ -1,12 +1,14 @@
 <?php
 require_once '../library/connections.php';
 require_once '../model/categories-model.php';
+require_once '../library/functions.php';
 
-$result = getCategories();
+$categories = getCategories();
 echo '<pre>';
-print_r($result);
+print_r($categories);
 echo '</pre>';
 
+$navList = buildNav($categories);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +23,9 @@ echo '</pre>';
       <nav>
       
       
-      <?php //echo $navList; ?>
+      <?php echo $navList; ?>
 
-      <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
+      <!-- <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
       
       <div class="menu-outer" id="nav-bar-hide">
           
@@ -39,7 +41,7 @@ echo '</pre>';
                   <li><a href="#" title="ACME Trap Page">Trap</a></li>
               </ul>
           </div>
-      </div>
+      </div> -->
     </nav>
     </header>
     
