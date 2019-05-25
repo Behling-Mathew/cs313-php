@@ -13,7 +13,7 @@ $navList = buildNav($categories);
 
 
 
-$imgArray = getImages();
+$imageArray = getImages();
 if (count($imageArray)) {
     $imageDisplay = buildImageDisplay($imageArray);
 } else {
