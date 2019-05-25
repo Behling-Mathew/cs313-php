@@ -28,8 +28,6 @@ function buildPlayerTable($playersArray) {
         $id .= '<td>' . $x['salary'] . '</td>';
         $id .= '<td>' . $x['age'] . '</td>';
         $id .= '</tr>';
-        $id .= '<tr>';
-        $id .= '</tr>';
     }
     return $id;
 }
