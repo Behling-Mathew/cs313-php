@@ -1,0 +1,73 @@
+body {
+    background-color: #222629;
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+}
+.site-name {
+    padding-left: 25px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
+header {
+    background-color: white;
+    margin-top: 0;
+}
+.menu-outer {
+    height: 40px;
+    background-color: white;
+}
+nav {
+    margin-top: 0;
+    padding: 0;
+    
+}
+nav.table {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+nav ul {
+    
+    list-style: none;
+    padding: 10px;
+    min-width: 500px;
+    
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: #86c232;
+    font-size: 1.3rem;
+   
+}
+nav ul li a:hover {
+    background-color: #222629;
+    color: white;
+    border-radius: 10px;
+}
+nav ul.hide {display: none;}
+.hide{display: none;}
+
+button.toggle-button {
+    
+    position: relative;
+    padding: 9px;
+    top: 56px;
+    background-color: #86c232;
+    color: white;
+    border-color:white;
+}
+button.toggle-button:hover {
+    background-color: #222629;
+}
