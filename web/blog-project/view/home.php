@@ -3,8 +3,10 @@ require_once '../library/connections.php';
 require_once '../model/categories-model.php';
 
 $result = getCategories();
-var_dump($result);
-echo var_dump($result);
+echo '<pre>';
+print_r($result);
+echo '</pre>';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
