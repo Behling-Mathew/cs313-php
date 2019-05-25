@@ -13,14 +13,14 @@ $navList = buildNav($categories);
 
 
 
-$imageArray = getImages();
+$playersArray = getPlayers();
 echo '<pre>';
-print_r($imageArray);
+print_r($playersArray);
 echo '</pre>';
-if (count($imageArray)) {
-    $imageDisplay = buildImageDisplay($imageArray);
+if (count($playersArray)) {
+    $playerDisplay = buildImageDisplay($playersArray);
 } else {
-    $imageDisplay = '<p>Sorry, no images could be found.</p>';
+    $playerDisplay = '<p>Sorry, no images could be found.</p>';
 }
 
 
@@ -32,6 +32,12 @@ if (count($imageArray)) {
     <title>Home - Sports Blog</title>
     <meta name="description" content="This is the home page for UJF sports blog.">
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/head.php'; ?>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
   </head>
   <body>
     <header>
@@ -62,12 +68,42 @@ if (count($imageArray)) {
     </header>
     
     <main>
-        <?php echo $imageDisplay; ?>
-      
+        
+        <table id="players" class="table table-striped table-bordered" style="width:80%">
+        <thead>
+            <tr>
+                <th>Portrait</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Team</th>
+                <th>Salary</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+          <?php echo $playerDisplay; ?> 
+        </tbody>
+        <tfoot>
+            <tr>
+            <th>Portrait</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Team</th>
+                <th>Salary</th>
+                <th>Age</th>
+            </tr>
+        </tfoot>
+    </table>
+
+ 
     </main>
     <footer>
      
     </footer>
     <script src="/blog-project/js/hamburger.js"></script>    
   </body>
+  <script>
+  $(document).ready(function() {
+    $('#players').DataTable();
+} ); </script>
 </html>

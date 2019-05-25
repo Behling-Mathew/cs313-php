@@ -10,12 +10,12 @@ function getCategories() {
     return $categories;
 }
 
-function getImages() {
+function getPlayers() {
     $db = dbConnect();
-    $sql = 'SELECT img_id, img_name, img_path FROM images';
+    $sql = 'SELECT player_id, first_name, last_path, team, salary, age, img_path FROM players';
     $stmt = $db->prepare($sql);
     $stmt->execute();
-    $imageArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $playersArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
-    return $imageArray; 
+    return $playersArray; 
 }

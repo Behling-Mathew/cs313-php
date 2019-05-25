@@ -17,11 +17,32 @@ function buildNav($categories) {
        return $navList;
 }
 
-function buildImageDisplay($imageArray) {
-    $id = '<div>';
-    foreach ($imageArray as $x) {
-        $id .= '<img class="player-image" src="' . $x['img_path'] . '" alt="Player image name:' . $x['img_name'] . '">'; 
+function buildImageDisplay($playersArray) {
+    $id = '<tr>';
+    foreach ($playersArray as $x) {
+        $id .= '<td><img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '"></td>';
+        $id .= '<td>' . $x['first_name'] . '</td>';
+        $id .= '<td>' . $x['last_name'] . '</td>';
+        $id .= '<td>' . $x['team'] . '</td>';
+        $id .= '<td>' . $x['salary'] . '</td>';
+        $id .= '<td>' . $x['age'] . '</td>';
     }
-    $id .= '</div>';
+    $id .= '</tr>';
     return $id;
 }
+
+<tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+            </tr>
+
+            <th>Portrait</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Team</th>
+                <th>Salary</th>
+                <th>Age</th>

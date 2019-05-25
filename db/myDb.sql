@@ -24,6 +24,37 @@ CREATE TABLE comments
 , img_id           INT             NOT NULL REFERENCES images(img_id));
 
 
+CREATE TABLE players 
+( player_id           SERIAL          PRIMARY KEY
+, first_name          VARCHAR(50)    NOT NULL
+, last_name           VARCHAR(50)    NOT NULL
+, team                VARCHAR(50)    NOT NULL
+, salary              VARCHAR(50)    NOT NULL
+, age                 INT            NOT NULL   
+, img_path            VARCHAR(150)   NOT NULL);
+
+INSERT INTO players(first_name, last_name, team, salary, age, img_path) VALUES 
+('Stephen', 'Curry', 'Golden State Warriors', '$37,457,154', 31, '/blog-project/images/players/curry.png'),
+('Anthony', 'Davis', 'New Orleans Pelicans', '$25,434,263', 26, '/blog-project/images/players/davis.png'),
+('Luka', 'Doncic', 'Dallas Mavericks', '$6,560,640', 20, '/blog-project/images/players/doncic.png'),
+('Kevin', 'Durant', 'Golden State Warriors', '$30,000,000', 30, '/blog-project/images/players/durant.png'),
+('Joel', 'Embiid', 'Philadelphia 76ers', '$25,467,250', 25, '/blog-project/images/players/embiid.png'),
+('Paul', 'George', 'Oklahoma City Thunder', '$30,560,700', 29, '/blog-project/images/players/george.png'),
+('Giannis', 'Antetokounmpo', 'Milwaukee Bucks', '$24,157,304', 24, '/blog-project/images/players/giannis.png'),
+('Rudy', 'Gobert', 'Utah Jazz', '$23,241,573', 26, '/blog-project/images/players/gobert.png'),
+('Blake', 'Griffin', 'Detroit Pistons', '$32,088,932', 30, '/blog-project/images/players/griffin.png'),
+('James', 'Harden', 'Houston Rockets', '$30,431,854', 29, '/blog-project/images/players/harden.png'),
+('Joe', 'Ingles', 'Utah Jazz', '$13,045,455', 31, '/blog-project/images/players/ingles.png'),
+('Kyrie', 'Irving', 'Boston Celtics', '$20,009,189', 27, '/blog-project/images/players/irving.png'),
+('Kemba', 'Walker', 'Charlotte Hornets', '$12,000,000', 29, '/blog-project/images/players/kemba.png'),
+('Klay', 'Thompson', 'Golden State Warriors', '$18,988,725', 29, '/blog-project/images/players/klay.png'),
+('LeBron', 'James', 'Los Angeles Lakers', '$35,654,150', 34, '/blog-project/images/players/lebron.png'),
+('Kawhi', 'Leonard', 'Toronto Raptors', '$23,114,067', 27, '/blog-project/images/players/leonard.png'),
+('Damian', 'Lillard', 'Portland Trailblazers', '$27,977,689', 28, '/blog-project/images/players/lillard.png'),
+('Donovan', 'Mitchell', 'Utah Jazz', '$3,111,480', 22, '/blog-project/images/players/mitchell.png'),
+('Chris', 'Paul', 'Houston Rockets', '$35,654,150', 34, '/blog-project/images/players/paul.png'),
+('Nikola', 'Jokic', 'Denver Nuggets', '$24,605,181', 24, '/blog-project/images/players/joker.png');
+
 
 -- TESTING INSERTS INTO EACH TABLE -- 
 INSERT INTO categories(category_name)
