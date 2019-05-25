@@ -70,7 +70,7 @@ if (count($playersArray)) {
     
     <main>
         
-     <table id="example" class="table table-striped table-bordered" style="width:100%">
+     <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>Portrait</th>
@@ -98,12 +98,13 @@ if (count($playersArray)) {
 
     </main>
     <footer>
-     
+        <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
+            <?php echo date('l, d F Y') ?></p>
     </footer>
     <script src="/blog-project/js/hamburger.js"></script>    
   </body>
   <script>
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#players').DataTable();
 } ); </script>
 </html>

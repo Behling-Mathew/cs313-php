@@ -50,14 +50,15 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     padding: 10px;
-    color: #86c232;
-    font-size: 1.3rem;
+    color:black;
+    font-size: 1.4rem;
    
 }
 nav ul li a:hover {
     background-color: #222629;
     color: white;
-    border-radius: 10px;
+    border-bottom: solid 3px #222629;;
+    border-top-right-radius: 10px;
 }
 nav ul.hide {display: none;}
 .hide{display: none;}
@@ -66,11 +67,55 @@ button.toggle-button {
     
     position: relative;
     padding: 9px;
-    top: 56px;
-    background-color: #86c232;
+    top: 50px;
+    left: 3px;
+    background-color: #222629;
     color: white;
     border-color:white;
+    border-radius: 5px;
 }
 button.toggle-button:hover {
-    background-color: #222629;
+    background-color: white;
+    color: black;
+}
+
+th {
+    background-color: #6B6E70;
+}
+td {
+    background-color: white;
+    color: #222629;
+}
+label {
+    color: white;
+}
+
+.players-heading {
+    padding: 30px;
+    margin: 20px;
+}
+
+div#players_info.dataTables_info {
+    color: white;
+}
+.main-nav {
+    background-color:#86c232;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+footer {
+    height: 100px;
+    background-color: #6b6e70;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 100px;
+}
+footer p {
+    text-align: center;
+    position: relative;
+    top: 40px;
+
+}
+footer a {
+    color: #86c232;
 }

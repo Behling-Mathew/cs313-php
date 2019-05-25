@@ -11,6 +11,11 @@
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/blog-project/css/main.css" rel="stylesheet" media="screen">
+    <link href="/blog-project/css/large.css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -20,7 +25,7 @@
       
      
 
-      <!-- <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
+      <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
       
       <div class="menu-outer" id="nav-bar-hide">
           
@@ -36,24 +41,16 @@
                   <li><a href="#" title="ACME Trap Page">Trap</a></li>
               </ul>
           </div>
-      </div> -->
+      </div>
     </nav>
     </header>
     
     <main>
        
-
-<style>
-    body {
-        max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-   
-    </style>
+    <h2 class="players-heading">Players Page</h2>
 
 
-    <table id="example" class="table table-striped table-bordered" style="width:80%">
+    <table id="players" class="table table-striped table-bordered" style="width:80%">
         <thead>
             <tr>
                 <th>Portrait</th>
@@ -90,12 +87,13 @@
       
     </main>
     <footer>
-     
+        <p class="footer-p">&copy;This website is solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
+            <?php echo date('l, d F Y') ?></p>
     </footer>
     <script src="/blog-project/js/hamburger.js"></script>    
   </body>
   <script>
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#players').DataTable();
 } ); </script>
 </html>
