@@ -63,7 +63,7 @@ if (count($commentsArray)) {
         $commentForm = "<form method='post' action='../index.php'>";
         $commentForm .= "<fieldset>";
         $commentForm .= "<h2>Leave a Comment</h2>";
-        $commentForm .= "<label>Display Name<input type='text' name='displayName' id='displayName' value='" . $_SESSION['userData']['user_first_name'] ." ".$_SESSION['userData']['user_last_name'] "' readonly></label>";
+        $commentForm .= "<label>Display Name<input type='text' name='displayName' id='displayName' value='" . $_SESSION['userData']['user_first_name'] . " " . $_SESSION['userData']['user_last_name'] . "' readonly></label>";
         $commentForm .= "<textarea class='description' rows='10' cols='45' name='comment_text' id='comment_text' required></textarea>";
         $commentForm .= "<input type='submit' value='Submit Review'>";
         $commentForm .= "<input type='hidden' name='user_id' value='" . $_SESSION['userData']['user_id'] . "'>";
