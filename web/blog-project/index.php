@@ -83,8 +83,11 @@ $action = filter_input(INPUT_POST, 'action');
 
        case 'addNewComment':
        $comment_text = filter_input(INPUT_POST, 'comment_text', FILTER_SANITIZE_STRING);
-       $user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_STRING);
+       //$user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_STRING);
        $img_id = filter_input(INPUT_POST, 'img_id', FILTER_SANITIZE_STRING);
+
+       $user_id = $_SESSION['userData']['user_id'];
+
 
        // Check for missing data
     if (empty($comment_text) || empty($user_id) || empty($img_id)) {
