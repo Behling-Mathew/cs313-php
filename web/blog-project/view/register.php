@@ -34,7 +34,7 @@ $navList = buildNav($categories);
       ?>
         
      <h2 class="players-heading">Register</h2>
-     <form method="post" action="/blog-project/">
+     <form method="post" action="/blog-project/index.php">
         
         <fieldset>
           <h2>All fields are required.</h2>
@@ -50,7 +50,7 @@ $navList = buildNav($categories);
         
       </form>
 
-      <form method="post" action="/blog-project/">
+      <form method="post" action="/blog-project/index.php">
         
         <fieldset>
           

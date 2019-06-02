@@ -54,5 +54,5 @@ $action = filter_input(INPUT_POST, 'action');
        }
        break;
     default:
-     include '/blog-project/view/home.php';
+     header('Location: /blog-project/view/home.php');
    }
