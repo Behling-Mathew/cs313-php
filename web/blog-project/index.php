@@ -23,7 +23,7 @@ $action = filter_input(INPUT_POST, 'action');
     break;
 
     case 'login':
-    include 'view/login.php';
+    header('Location: view/login.php');
     break;
 
     case 'Login2':
