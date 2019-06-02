@@ -101,16 +101,16 @@ $action = filter_input(INPUT_POST, 'action');
       if ($commentOutcome === 1) {
 
         $_SESSION['message'] = "<p>Your comment was successfully added to the database!</p>";
-        header('Location: view/Playoffs.php')
+        header('Location: view/Playoffs.php');
         exit;
       } else {
         $_SESSION['message'] = "<p>Error. Your comment could not be added.</p>";
-        header('Location: view/Playoffs.php')
+        header('Location: view/Playoffs.php');
         exit;
       }
 
        break;
-       
+
     default:
      header('Location: view/home.php');
    }
