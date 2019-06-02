@@ -57,6 +57,21 @@
        
     <h2 class="players-heading">2019 Playoffs</h2>
 
+    <form class="form" method="post" action="/blog-project/index.php">
+        
+        <fieldset>
+          <h2>All fields are required.</h2>
+          <label>First Name<input type="text" name="user_first_name" id="user_first_name" placeholder="John"  required></label>
+          <label>Last Name<input type="text" name="user_last_name" id="user_last_name" placeholder="Smith"  required></label>
+          <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="johnsmith@example.com" required></label>
+          <label for="user_password">Password</label> 
+          <input type="password" name="user_password" id="user_password" required>
+          <input class="submit-button" type="submit" value="Register">
+          <!-- Add the action name - value pair -->
+          <input type="hidden" name="action" value="register">
+        </fieldset>  
+        
+      </form>
 
     <!-- <table id="players" class="table table-striped table-bordered" style="width:80%">
         <thead>

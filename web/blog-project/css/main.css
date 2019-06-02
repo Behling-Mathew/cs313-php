@@ -150,3 +150,29 @@ input.submit-comment:hover {
     color: white;
     font-weight: bold;
 }
+form.form  {
+    
+    max-width: 300px;
+    padding: 20px;
+    margin-left: 10px;
+    background-color: #6b6e70;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.submit-button{
+    padding: 10px;
+    margin-top: 20px;
+}
+.submit-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.message {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    padding: 15px;
+    color: #ffd24b;
+}

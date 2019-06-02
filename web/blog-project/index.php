@@ -35,7 +35,7 @@ $action = filter_input(INPUT_POST, 'action');
 
 // Run basic checks, return if errors
     if (empty($user_email_checked) || empty($checkPassword)) {
-      $_SESSION['message'] = '<p>Please provide a valid email address and password. ' . $user_email . ' ' . $checkPassword . '</p>';
+      $_SESSION['message'] = '<p class="message">Please provide a valid email address and password. ' . $user_email . ' ' . $checkPassword . '</p>';
       header('Location: view/login.php');
       exit;
     }
@@ -43,7 +43,7 @@ $action = filter_input(INPUT_POST, 'action');
 
 // A valid user exists, log them in
     $_SESSION['loggedin'] = TRUE;
-    $_SESSION['message'] = '<p>You have successfully logged in using ' . $user_email . '.</p>';
+    $_SESSION['message'] = '<p class="message">You have successfully logged in using ' . $user_email . '.</p>';
     $userData = getUser($user_email);
     $_SESSION['userData'] = $userData;
     header('Location: view/home.php');
@@ -59,7 +59,7 @@ $action = filter_input(INPUT_POST, 'action');
      
 
     if(empty($user_first_name) || empty($user_last_name) || empty($user_email) || empty($user_password)){
-        $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
+        $_SESSION['message'] = '<p class="message">Please provide information for all empty form fields.</p>';
         include 'view/register.php';
         exit; 
        }
@@ -71,12 +71,12 @@ $action = filter_input(INPUT_POST, 'action');
      // Check and report the result
     if($regOutcome === 1){
         
-        $_SESSION['message'] = "<p>Thanks for registering $user_first_name. Please use your email and password to login.</p>";
+        $_SESSION['message'] = "<p class='message'>Thanks for registering $user_first_name. Please use your email and password to login.</p>";
         
         header('Location: view/register.php');
         exit;
        } else {
-        $_SESSION['message'] = "<p>Sorry $user_first_name, but the registration failed. Please try again.</p>";
+        $_SESSION['message'] = "<p class='message'>Sorry $user_first_name, but the registration failed. Please try again.</p>";
         include 'view/register.php';
         exit;
        }
@@ -92,7 +92,7 @@ $action = filter_input(INPUT_POST, 'action');
 
        // Check for missing data
     if (empty($comment_text) || empty($user_id) || empty($img_id)) {
-        $message = '<p>Error. Please provide information for all empty form fields. ' . $comment_text . ' ' . $user_id . ' ' . $img_id . '</p>';
+        $message = '<p class="message">Error. Please provide information for all empty form fields. ' . $comment_text . ' ' . $user_id . ' ' . $img_id . '</p>';
         $_SESSION['message'] = $message;
         
         header('Location: view/Playoffs.php');
@@ -104,11 +104,11 @@ $action = filter_input(INPUT_POST, 'action');
 
       if ($commentOutcome === 1) {
 
-        $_SESSION['message'] = "<p>Your comment was successfully added to the database!</p>";
+        $_SESSION['message'] = "<p class='message'>Your comment was successfully added to the database!</p>";
         header('Location: view/Playoffs.php');
         exit;
       } else {
-        $_SESSION['message'] = "<p>Error. Your comment could not be added.</p>";
+        $_SESSION['message'] = "<p class='message'>Error. Your comment could not be added.</p>";
         header('Location: view/Playoffs.php');
         exit;
       }

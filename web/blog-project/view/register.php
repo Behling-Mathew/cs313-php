@@ -41,7 +41,7 @@ $navList = buildNav($categories);
       ?>
         
      <h2 class="players-heading">Register</h2>
-     <form method="post" action="/blog-project/index.php">
+     <form class="form" method="post" action="/blog-project/index.php">
         
         <fieldset>
           <h2>All fields are required.</h2>
@@ -50,7 +50,7 @@ $navList = buildNav($categories);
           <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="johnsmith@example.com" <?php if(isset($user_email)){echo "value='$user_email'";}  ?> required></label>
           <label for="user_password">Password</label> 
           <input type="password" name="user_password" id="user_password" required>
-          <input type="submit" value="Register">
+          <input class="submit-button" type="submit" value="Register">
           <!-- Add the action name - value pair -->
           <input type="hidden" name="action" value="register">
         </fieldset>  
