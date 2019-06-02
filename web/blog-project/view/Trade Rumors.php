@@ -2,7 +2,7 @@
 require_once '../library/connections.php';
 require_once '../model/categories-model.php';
 require_once '../library/functions.php';
-
+session_start();
 $categories = getCategories();
 //echo '<pre>';
 //print_r($categories);

@@ -124,12 +124,25 @@ footer a {
     color: black;
     position: relative;
     left: 820px;
-    bottom: 50px;
+    bottom: 35px;
 }
 
 #logout {
     color: black;
     position: relative;
     left: 820px;
-    bottom: 50px;
+    bottom: 35px;
+}
+
+input.submit-comment{
+    display: block;
+    color: #86c232;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+input.submit-comment:hover {
+    background-color: white;
+    color: black;
 }

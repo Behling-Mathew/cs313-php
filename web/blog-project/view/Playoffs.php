@@ -66,12 +66,12 @@ if (count($commentsArray)) {
 
         $user_id = $_SESSION['userData']['user_id'];
         $userData = $_SESSION['userData'];
-        echo '<p> This is the user id: ' . $user_id . '</p>';
+        echo '<h3>Commenting as: ' . $_SESSION['userData']['user_first_name'] . ' ' . $_SESSION['userData']['user_last_name'] . '</h3>';
         $commentForm = "<form method='post' action='../index.php'>";
         $commentForm .= "<fieldset>";
         $commentForm .= "<h2>Leave a Comment</h2>";
         $commentForm .= "<textarea rows='10' cols='45' name='comment_text' id='comment_text' required></textarea>";
-        $commentForm .= "<input type='submit' value='Submit Comment'>";
+        $commentForm .= "<input class='submit-comment' type='submit' value='Submit Comment'>";
         $commentForm .= "<input type='hidden' name='user_id' value='" . $user_id . "'>";
         $commentForm .= "<input type='hidden' name='img_id' value='3'>";
         $commentForm .= "<input type='hidden' name='action' value='addNewComment'>";

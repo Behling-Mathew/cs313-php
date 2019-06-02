@@ -13,7 +13,7 @@ $navList = buildNav($categories);
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Register - Sports Blog</title>
+    <title>Login - Sports Blog</title>
     <meta name="description" content="This is the account login page.">
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/head.php'; ?>
   </head>
@@ -40,7 +40,7 @@ $navList = buildNav($categories);
       }
       ?>
         
-     <h2 class="players-heading">Register</h2>
+     <h2 class="players-heading">Login</h2>
      
 
      <form method="post" action="../index.php">
