@@ -29,12 +29,12 @@ $action = filter_input(INPUT_POST, 'action');
     case 'Login2':
 
     $user_email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
-    $user_email = checkEmail($user_email);
+    $user_email_checked = checkEmail($user_email);
     $user_password = filter_input(INPUT_POST, 'user_password', FILTER_SANITIZE_STRING);
     $checkPassword = checkPassword($user_password);
 
 // Run basic checks, return if errors
-    if (empty($user_email) || empty($checkPassword)) {
+    if (empty($user_email_checked) || empty($checkPassword)) {
       $_SESSION['message'] = '<p>Please provide a valid email address and password. ' . $user_email . ' ' . $checkPassword . '</p>';
       header('Location: view/login.php');
       exit;
