@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once 'library/connections.php';
-require_once 'model/categories-model.php';
-require_once 'library/functions.php';
+require_once '/blog-project/library/connections.php';
+require_once '/blog-project/model/categories-model.php';
+require_once '/blog-project/library/functions.php';
 
 $categories = getCategories();
 
@@ -19,7 +19,7 @@ $action = filter_input(INPUT_POST, 'action');
 
     case 'logout':
     session_destroy();
-    header('Location: /blog-project/');
+    header('Location: /blog-project/index.php');
     break;
 
     case 'register':
@@ -45,7 +45,7 @@ $action = filter_input(INPUT_POST, 'action');
         
         $_SESSION['message'] = "<p>Thanks for registering $user_first_name. Please use your email and password to login.</p>";
         
-        header('Location: /blog-project/');
+        header('Location: /blog-project/index.php');
         exit;
        } else {
         $_SESSION['message'] = "<p>Sorry $user_first_name, but the registration failed. Please try again.</p>";
