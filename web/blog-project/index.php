@@ -45,14 +45,14 @@ $action = filter_input(INPUT_POST, 'action');
         
         $_SESSION['message'] = "<p>Thanks for registering $user_first_name. Please use your email and password to login.</p>";
         
-        header('Location: /blog-project/index.php');
+        header('Location: blog-project/index.php');
         exit;
        } else {
         $_SESSION['message'] = "<p>Sorry $user_first_name, but the registration failed. Please try again.</p>";
-        include '/blog-project/view/register.php';
+        include 'blog-project/view/register.php';
         exit;
        }
        break;
     default:
-     header('Location: /blog-project/view/home.php');
+     header('Location: blog-project/view/home.php');
    }
