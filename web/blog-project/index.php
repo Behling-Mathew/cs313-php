@@ -19,7 +19,7 @@ $action = filter_input(INPUT_POST, 'action');
 
     case 'logout':
     session_destroy();
-    //header('Location: /blog-project/index.php');
+    header('Location: view/home.php');
     break;
 
     case 'register':
