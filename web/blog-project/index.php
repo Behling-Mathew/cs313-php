@@ -44,7 +44,8 @@ $action = filter_input(INPUT_POST, 'action');
 // A valid user exists, log them in
     $_SESSION['loggedin'] = TRUE;
     $_SESSION['message'] = '<p>You have successfully logged in.</p>';
-    $_SESSION['userData'] = getUser($user_email);
+    $userData = getUser($user_email);
+    $_SESSION['userData'] = $userData;
     header('Location: view/home.php');
     exit;
     break;

@@ -49,6 +49,12 @@ if (count($commentsArray)) {
     </header>
     
     <main>
+    <?php
+      if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+        $_SESSION['message'] = NULL;
+      }
+      ?> 
         
      <h2 class="players-heading">Playoffs 2019</h2>
      <img src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
