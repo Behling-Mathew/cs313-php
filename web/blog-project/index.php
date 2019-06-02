@@ -22,6 +22,32 @@ $action = filter_input(INPUT_POST, 'action');
     header('Location: view/home.php');
     break;
 
+    case 'login':
+    include 'view/login.php';
+    break;
+
+    case 'Login2':
+
+    $user_email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
+    $user_email = checkEmail($user_email);
+    $user_password = filter_input(INPUT_POST, 'user_password', FILTER_SANITIZE_STRING);
+    $checkPassword = checkPassword($user_password);
+
+// Run basic checks, return if errors
+    if (empty($clientEmail) || empty($checkPassword)) {
+      $_SESSION['message'] = '<p>Please provide a valid email address and password.</p>';
+      include 'view/login.php';
+      exit;
+    }
+
+
+// A valid user exists, log them in
+    $_SESSION['loggedin'] = TRUE;
+    $_SESSION['message'] = '<p>You have successfully logged in.</p>';
+    include 'view/home.php';
+    exit;
+    break;
+
     case 'register':
 
     $user_first_name = filter_input(INPUT_POST, 'user_first_name', FILTER_SANITIZE_STRING);

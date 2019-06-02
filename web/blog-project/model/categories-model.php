@@ -55,3 +55,44 @@ function regClient($user_first_name, $user_last_name, $user_email, $user_passwor
     // Return the indication of success (rows changed)
     return $rowsChanged;
   }
+
+
+  // check that email exists
+function checkEmail($clientEmail) {
+    $db = dbConnect();
+    $sql = 'SELECT user_email FROM users WHERE user_email = :email';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':email', $user_email, PDO::PARAM_STR);
+    $stmt->execute();
+    $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
+    $stmt->closeCursor();
+    if (empty($matchEmail)) {
+      return 0;
+      //echo 'Nothing found';
+      //exit;
+    } else {
+      return 1;
+      //echo 'Match found';
+      //exit;
+    }
+  }
+
+  function checkPassword($user_password) {
+    $db = dbConnect();
+    $sql = 'SELECT user_password FROM users WHERE user_password = :password';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':password', $user_password, PDO::PARAM_STR);
+    $stmt->execute();
+    $matchPassword = $stmt->fetch(PDO::FETCH_NUM);
+    $stmt->closeCursor();
+    if (empty($matchPassword)) {
+      return 0;
+      //echo 'Nothing found';
+      //exit;
+    } else {
+      return 1;
+      //echo 'Match found';
+      //exit;
+    }
+  }
+
