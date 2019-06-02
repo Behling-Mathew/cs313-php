@@ -32,7 +32,7 @@ $action = filter_input(INPUT_POST, 'action');
 
        // Send the data to the model
     $regOutcome = regClient($user_first_name, $user_last_name, $user_email, $user_password);
-     break;
+     
 
      // Check and report the result
     if($regOutcome === 1){
@@ -46,7 +46,7 @@ $action = filter_input(INPUT_POST, 'action');
         include '/blog-project/view/register.php';
         exit;
        }
-    
+       break;
     default:
      include 'view/home.php';
    }
