@@ -16,6 +16,12 @@ $action = filter_input(INPUT_POST, 'action');
  }
 
  switch ($action){
+
+    case 'logout':
+    session_destroy();
+    header('Location: /blog-project/');
+    break;
+
     case 'register':
 
     $user_first_name = filter_input(INPUT_POST, 'user_first_name', FILTER_SANITIZE_STRING);
@@ -48,5 +54,5 @@ $action = filter_input(INPUT_POST, 'action');
        }
        break;
     default:
-     include 'view/home.php';
+     include '/blog-project/view/home.php';
    }

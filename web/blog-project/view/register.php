@@ -50,6 +50,17 @@ $navList = buildNav($categories);
         
       </form>
 
+      <form method="post" action="/blog-project/">
+        
+        <fieldset>
+          
+          <input type="submit" value="logout">
+          <!-- Add the action name - value pair -->
+          <input type="hidden" name="action" value="logout">
+        </fieldset>  
+        
+      </form>
+
     </main>
     <footer>
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
