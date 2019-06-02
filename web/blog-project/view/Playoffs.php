@@ -59,7 +59,8 @@ if (count($commentsArray)) {
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
 
         $user_id = $_SESSION['userData']['user_id'];
-        
+        $userData = $_SESSION['userData'];
+        var_dump($userData);
         $commentForm = "<form method='post' action='../index.php'>";
         $commentForm .= "<fieldset>";
         $commentForm .= "<h2>Leave a Comment</h2>";
