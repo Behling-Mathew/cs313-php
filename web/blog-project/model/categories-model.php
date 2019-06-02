@@ -29,3 +29,29 @@ function getComments() {
     $stmt->closeCursor();
     return $commentsArray; 
 }
+
+// register a client
+// Insert site visitor data to database
+function regClient($user_first_name, $user_last_name, $user_email, $user_password) {
+    // Create a connection object using the acme connection function
+    $db = dbConnect();
+    // The SQL statement
+    $sql = 'INSERT INTO users (user_first_name, user_last_name, user_email, user_password)
+             VALUES (:user_first_name, :user_last_name, :user_email, :user_password)';
+    // Create the prepared statement using the acme connection
+    $stmt = $db->prepare($sql);
+    // The next four lines replace the placeholders in the SQL statement with the actual values in the variables
+    // and tells the database the type of data it is
+    $stmt->bindValue(':user_first_name', $clientFirstname, PDO::PARAM_STR);
+    $stmt->bindValue(':user_last_name', $user_last_name, PDO::PARAM_STR);
+    $stmt->bindValue(':user_email', $user_email, PDO::PARAM_STR);
+    $stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
+    //Insert the data
+    $stmt->execute();
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+    // Close the database interaction
+    $stmt->closeCursor();
+    // Return the indication of success (rows changed)
+    return $rowsChanged;
+  }

@@ -2,7 +2,7 @@
 require_once '../library/connections.php';
 require_once '../model/categories-model.php';
 require_once '../library/functions.php';
-
+session_start();
 $categories = getCategories();
 //echo '<pre>';
 //print_r($categories);
@@ -43,7 +43,12 @@ if (count($playersArray)) {
     </header>
     
     <main>
-        
+    <?php
+      if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+        $_SESSION['message'] = NULL;
+      }
+      ?> 
     <h2 class="players-heading">Welcome to the home page. This site is still being built, but has some features currently available.</h2>
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
