@@ -73,7 +73,7 @@ $action = filter_input(INPUT_POST, 'action');
         
         $_SESSION['message'] = "<p class='message'>Thanks for registering $user_first_name. Please use your email and password to login.</p>";
         
-        header('Location: view/register.php');
+        header('Location: view/login.php');
         exit;
        } else {
         $_SESSION['message'] = "<p class='message'>Sorry $user_first_name, but the registration failed. Please try again.</p>";
