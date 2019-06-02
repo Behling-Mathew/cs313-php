@@ -92,7 +92,7 @@ $action = filter_input(INPUT_POST, 'action');
 
        // Check for missing data
     if (empty($comment_text) || empty($user_id) || empty($img_id)) {
-        $message = '<p>Error. Please provide information for all empty form fields.</p>';
+        $message = '<p>Error. Please provide information for all empty form fields. ' . $comment_text . ' ' . $user_id . ' ' . $img_id . '</p>';
         $_SESSION['message'] = $message;
         
         header('Location: view/Playoffs.php');
