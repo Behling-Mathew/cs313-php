@@ -42,7 +42,7 @@ function regClient($user_first_name, $user_last_name, $user_email, $user_passwor
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL statement with the actual values in the variables
     // and tells the database the type of data it is
-    $stmt->bindValue(':user_first_name', $clientFirstname, PDO::PARAM_STR);
+    $stmt->bindValue(':user_first_name', $user_first_name, PDO::PARAM_STR);
     $stmt->bindValue(':user_last_name', $user_last_name, PDO::PARAM_STR);
     $stmt->bindValue(':user_email', $user_email, PDO::PARAM_STR);
     $stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
