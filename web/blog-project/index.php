@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once '/library/connections.php';
-require_once '/model/categories-model.php';
-require_once '/library/functions.php';
+require_once 'library/connections.php';
+require_once 'model/categories-model.php';
+require_once 'library/functions.php';
 
 $categories = getCategories();
 
@@ -32,7 +32,7 @@ $action = filter_input(INPUT_POST, 'action');
 
     if(empty($user_first_name) || empty($user_last_name) || empty($user_email) || empty($user_password)){
         $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
-        include '/view/register.php';
+        include 'view/register.php';
         exit; 
        }
 
