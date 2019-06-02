@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once '/blog-project/library/connections.php';
-require_once '/blog-project/model/categories-model.php';
-require_once '/blog-project/library/functions.php';
+require_once '/library/connections.php';
+require_once '/model/categories-model.php';
+require_once '/library/functions.php';
 
 $categories = getCategories();
 
@@ -19,7 +19,7 @@ $action = filter_input(INPUT_POST, 'action');
 
     case 'logout':
     session_destroy();
-    header('Location: /blog-project/index.php');
+    //header('Location: /blog-project/index.php');
     break;
 
     case 'register':
@@ -32,7 +32,7 @@ $action = filter_input(INPUT_POST, 'action');
 
     if(empty($user_first_name) || empty($user_last_name) || empty($user_email) || empty($user_password)){
         $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
-        include '/blog-project/view/register.php';
+        include '/view/register.php';
         exit; 
        }
 
