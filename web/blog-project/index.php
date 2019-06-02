@@ -36,7 +36,7 @@ $action = filter_input(INPUT_POST, 'action');
 // Run basic checks, return if errors
     if (empty($clientEmail) || empty($checkPassword)) {
       $_SESSION['message'] = '<p>Please provide a valid email address and password.</p>';
-      include 'view/login.php';
+      header('Location: view/login.php');
       exit;
     }
 
