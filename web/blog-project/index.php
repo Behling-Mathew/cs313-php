@@ -44,6 +44,7 @@ $action = filter_input(INPUT_POST, 'action');
 // A valid user exists, log them in
     $_SESSION['loggedin'] = TRUE;
     $_SESSION['message'] = '<p>You have successfully logged in.</p>';
+    $_SESSION['userData'] = getUser($user_email);
     header('Location: view/home.php');
     exit;
     break;
@@ -79,6 +80,37 @@ $action = filter_input(INPUT_POST, 'action');
         exit;
        }
        break;
+
+       case 'addNewComment':
+       $comment_text = filter_input(INPUT_POST, 'comment_text', FILTER_SANITIZE_STRING);
+       $user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_STRING);
+       $img_id = filter_input(INPUT_POST, 'img_id', FILTER_SANITIZE_STRING);
+
+       // Check for missing data
+    if (empty($comment_text) || empty($user_id) || empty($img_id)) {
+        $message = '<p>Error. Please provide information for all empty form fields.</p>';
+        $_SESSION['message'] = $message;
+        
+        header('Location: view/Playoffs.php');
+        exit;
+      }
+
+      // send data to the model
+      $commentOutcome = insertComment($comment_text, $user_id, $img_id);
+
+      if ($commentOutcome === 1) {
+
+        $_SESSION['message'] = "<p>Your comment was successfully added to the database!</p>";
+        header('Location: view/Playoffs.php')
+        exit;
+      } else {
+        $_SESSION['message'] = "<p>Error. Your comment could not be added.</p>";
+        header('Location: view/Playoffs.php')
+        exit;
+      }
+
+       break;
+       
     default:
      header('Location: view/home.php');
    }

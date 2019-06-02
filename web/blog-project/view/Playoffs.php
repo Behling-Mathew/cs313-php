@@ -53,6 +53,30 @@ if (count($commentsArray)) {
      <h2 class="players-heading">Playoffs 2019</h2>
      <img src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
      <h3 class="players-heading">Who do you think will win?</h3>
+
+     <h3>Add a Comment</h3>
+      <?php
+      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
+
+        $user_id = $_SESSION['userData']['user_id'];
+        
+        $commentForm = "<form method='post' action='../index.php'>";
+        $commentForm .= "<fieldset>";
+        $commentForm .= "<h2>Leave a Comment</h2>";
+        $commentForm .= "<label>Display Name<input type='text' name='displayName' id='displayName' value='" . $_SESSION['userData']['user_first_name'] ." ".$_SESSION['userData']['user_last_name'] "' readonly></label>";
+        $commentForm .= "<textarea class='description' rows='10' cols='45' name='comment_text' id='comment_text' required></textarea>";
+        $commentForm .= "<input type='submit' value='Submit Review'>";
+        $commentForm .= "<input type='hidden' name='user_id' value='" . $_SESSION['userData']['user_id'] . "'>";
+        $commentForm .= "<input type='hidden' name='img_id' value='3'>";
+        $commentForm .= "<input type='hidden' name='action' value='addNewComment'>";
+        $commentForm .= "</fieldset>";
+        $commentForm .= "</form>";
+        echo $commentForm;
+      } else {
+        echo "<p'><span class='login-btn'><a href='../index.php?action=login' title='Account Menu'>Login</a></span> to add a comment.</p>";
+      }
+      ?>
+
      <table id="players" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
