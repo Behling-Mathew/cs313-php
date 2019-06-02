@@ -111,7 +111,7 @@ function checkEmail($user_email) {
     }
   }
 
-  function insertComment($comment_text, $comment_id, $img_id) {
+  function insertComment($comment_text, $user_id, $img_id) {
     // Create a connection object using the db connection function
     $db = dbConnect();
     // The SQL statement
