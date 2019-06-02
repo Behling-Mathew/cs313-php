@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once '../library/connections.php';
-require_once '../model/categories-model.php';
-require_once '../library/functions.php';
+require_once 'library/connections.php';
+require_once 'model/categories-model.php';
+require_once 'library/functions.php';
 
 $categories = getCategories();
 
