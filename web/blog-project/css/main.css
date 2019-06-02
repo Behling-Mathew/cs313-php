@@ -119,3 +119,17 @@ footer p {
 footer a {
     color: #86c232;
 }
+
+#login {
+    color: black;
+    position: relative;
+    left: 820px;
+    bottom: 50px;
+}
+
+#logout {
+    color: black;
+    position: relative;
+    left: 820px;
+    bottom: 50px;
+}
