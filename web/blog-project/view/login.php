@@ -52,6 +52,9 @@ $navList = buildNav($categories);
         </fieldset>  
       </form>
 
+      <h3>Not a member?</h3>
+      <a href='register.php' title="Create Account"><p class="white">Register here</p></a>
+
     </main>
     <footer>
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
