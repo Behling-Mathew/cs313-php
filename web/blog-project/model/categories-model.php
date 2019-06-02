@@ -58,7 +58,7 @@ function regClient($user_first_name, $user_last_name, $user_email, $user_passwor
 
 
   // check that email exists
-function checkEmail($clientEmail) {
+function checkEmail($user_email) {
     $db = dbConnect();
     $sql = 'SELECT user_email FROM users WHERE user_email = :email';
     $stmt = $db->prepare($sql);
