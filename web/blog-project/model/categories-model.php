@@ -94,7 +94,7 @@ function checkEmail($user_email) {
 
   function checkPassword($user_password, $user_email) {
     $db = dbConnect();
-    $sql = 'SELECT user_password, $user_email FROM users WHERE user_email = :email';
+    $sql = 'SELECT user_password, user_email FROM users WHERE user_email = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $user_email, PDO::PARAM_STR);
     $stmt->execute();
