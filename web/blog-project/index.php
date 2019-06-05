@@ -52,7 +52,7 @@ $action = filter_input(INPUT_POST, 'action');
       exit;
       break;
     } else {
-      $_SESSION['message'] = '<p class="message">Incorrect password.</p>';
+      $_SESSION['message'] = '<p class="message">Incorrect password.'. '$user_password' . 'vs' . '$db_password' . '</p>';
       header('Location: view/login.php');
       exit;
     }
