@@ -39,7 +39,7 @@ $action = filter_input(INPUT_POST, 'action');
       header('Location: view/login.php');
       exit;
     }
-    $userLogin = checkPassword($user_password, $user_email);
+    $userLogin = checkPassword($user_email);
     $db_password = $userLogin[0]['user_password'];
     if (password_verify($user_password, $db_password))
     {
