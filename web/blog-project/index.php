@@ -34,7 +34,7 @@ $action = filter_input(INPUT_POST, 'action');
     
 
 // Run basic checks, return if errors
-    if (empty($user_email_checked) {
+    if (empty($user_email_checked)) {
       $_SESSION['message'] = '<p class="message">Please provide a valid email address</p>';
       header('Location: view/login.php');
       exit;
