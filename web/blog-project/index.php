@@ -64,8 +64,11 @@ $action = filter_input(INPUT_POST, 'action');
         exit; 
        }
 
+       $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
+
        // Send the data to the model
-    $regOutcome = regClient($user_first_name, $user_last_name, $user_email, $user_password);
+    //$regOutcome = regClient($user_first_name, $user_last_name, $user_email, $user_password);
+    $regOutcome = regClient($user_first_name, $user_last_name, $user_email, $hashed_password);
      
 
      // Check and report the result
