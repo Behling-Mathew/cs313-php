@@ -50,12 +50,13 @@ $action = filter_input(INPUT_POST, 'action');
       $_SESSION['userData'] = $userData;
       header('Location: view/home.php');
       exit;
-      break;
+      
     } else {
       $_SESSION['message'] = '<p class="message">Incorrect password.'. $user_password . 'vs' . $db_password . '</p>';
       header('Location: view/login.php');
       exit;
     }
+    break;
 
 
     case 'register':
