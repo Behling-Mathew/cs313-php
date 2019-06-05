@@ -39,8 +39,8 @@ $action = filter_input(INPUT_POST, 'action');
       header('Location: view/login.php');
       exit;
     }
-    $checkPassword = checkPassword($user_password, $user_email);
-    $db_password = $checkPassword[0]['user_password'];
+    $userLogin = checkPassword($user_password, $user_email);
+    $db_password = $userLogin[0]['user_password'];
     if (password_verify($user_password, $db_password))
     {
       // A valid user exists, log them in
