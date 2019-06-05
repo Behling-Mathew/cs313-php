@@ -31,24 +31,32 @@ $action = filter_input(INPUT_POST, 'action');
     $user_email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
     $user_email_checked = checkEmail($user_email);
     $user_password = filter_input(INPUT_POST, 'user_password', FILTER_SANITIZE_STRING);
-    $checkPassword = checkPassword($user_password);
+    
 
 // Run basic checks, return if errors
-    if (empty($user_email_checked) || empty($checkPassword)) {
-      $_SESSION['message'] = '<p class="message">Please provide a valid email address and password. ' . $user_email . ' ' . $checkPassword . '</p>';
+    if (empty($user_email_checked) {
+      $_SESSION['message'] = '<p class="message">Please provide a valid email address</p>';
+      header('Location: view/login.php');
+      exit;
+    }
+    $checkPassword = checkPassword($user_password, $user_email);
+    $db_password = $checkPassword[0]['user_password'];
+    if (password_verify($user_password, $db_password))
+    {
+      // A valid user exists, log them in
+      $_SESSION['loggedin'] = TRUE;
+      $_SESSION['message'] = '<p class="message">You have successfully logged in using ' . $user_email . '.</p>';
+
+      $_SESSION['userData'] = $userData;
+      header('Location: view/home.php');
+      exit;
+      break;
+    } else {
+      $_SESSION['message'] = '<p class="message">Incorrect password.</p>';
       header('Location: view/login.php');
       exit;
     }
 
-
-// A valid user exists, log them in
-    $_SESSION['loggedin'] = TRUE;
-    $_SESSION['message'] = '<p class="message">You have successfully logged in using ' . $user_email . '.</p>';
-    $userData = getUser($user_email);
-    $_SESSION['userData'] = $userData;
-    header('Location: view/home.php');
-    exit;
-    break;
 
     case 'register':
 

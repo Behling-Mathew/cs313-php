@@ -92,20 +92,20 @@ function checkEmail($user_email) {
     }
   }
 
-  function checkPassword($user_password) {
+  function checkPassword($user_password, $user_email) {
     $db = dbConnect();
-    $sql = 'SELECT user_password FROM users WHERE user_password = :password';
+    $sql = 'SELECT user_password, $user_email FROM users WHERE user_email = :email';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':password', $user_password, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $user_email, PDO::PARAM_STR);
     $stmt->execute();
-    $matchPassword = $stmt->fetch(PDO::FETCH_NUM);
+    $results = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
-    if (empty($matchPassword)) {
+    if (!is_array($results)) {
       return 0;
-      //echo 'Nothing found';
+      echo 'Nothing found <br />';
       //exit;
     } else {
-      return 1;
+      return $results;
       //echo 'Match found';
       //exit;
     }
