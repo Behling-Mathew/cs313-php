@@ -100,13 +100,14 @@ function checkEmail($user_email) {
     $stmt->execute();
     $results = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
+    echo 'sql results fetched <br />';
     if (!is_array($results)) {
       return 0;
       echo 'Nothing found <br />';
       //exit;
     } else {
       return $results;
-      //echo 'Match found';
+      echo 'found array';
       //exit;
     }
   }
