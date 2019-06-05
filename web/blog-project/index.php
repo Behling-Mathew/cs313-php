@@ -52,7 +52,7 @@ $action = filter_input(INPUT_POST, 'action');
       exit;
       
     } else {
-      $_SESSION['message'] = '<p class="message">Incorrect password.'. $user_password . 'vs' . $db_password . var_dump($userLogin) . '</p>';
+      $_SESSION['message'] = '<p class="message">Incorrect password.'. $user_password . 'vs' . $db_password . 'user email: ' . $user_email . var_dump($userLogin) . '</p>';
       header('Location: view/login.php');
       exit;
     }
