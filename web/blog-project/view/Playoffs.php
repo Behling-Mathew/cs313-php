@@ -39,6 +39,9 @@ if (count($commentsArray)) {
       } else {
         echo '<a id="login" href="../index.php?action=login" title="Account Menu">Login</a>';
       }
+      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE && $_SESSION[$userData]['first_name']) {
+        echo "<p class='welcome'>Welcome, " . $_SESSION[$userData]['first_name'] . "</p>";
+      }
     ?>
       <nav>
       

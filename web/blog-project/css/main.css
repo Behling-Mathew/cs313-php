@@ -125,13 +125,45 @@ footer a {
     position: relative;
     left: 820px;
     bottom: 35px;
+     background-color: #222629;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: 3px solid #86c232;
 }
 
-#logout {
+#login:hover {
     color: black;
     position: relative;
     left: 820px;
     bottom: 35px;
+     background-color: #86c232;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 3px solid #222629;
+    
+}
+
+#logout {
+    position: relative;
+    left: 820px;
+    bottom: 35px;
+    background-color: #222629;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: 3px solid black;
+}
+#logout:hover {
+    position: relative;
+    left: 820px;
+    bottom: 35px;
+    background-color: #cc0000;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: 3px solid black;
 }
 
 input.submit-comment{
