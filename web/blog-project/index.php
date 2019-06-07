@@ -146,7 +146,7 @@ $action = filter_input(INPUT_POST, 'action');
       break;
 
       case 'deleteComment':
-      $commentId = filter_input(INPUT_GET, 'comment_id', FILTER_SANTIZE_NUMBER_INT);
+      $commentId = filter_input(INPUT_POST, 'comment_id', FILTER_SANTIZE_NUMBER_INT);
       $deleteResult = deleteComment($commentId);
 
       if ($deleteResult) {
