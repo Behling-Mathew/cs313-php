@@ -44,7 +44,7 @@ if (count($commentsArray)) {
       ?> 
         
      <h2 class="players-heading">Playoffs 2019</h2>
-     <img src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
+     <img class="img-border" src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
      <h3 class="players-heading question">Who do you think will win?</h3>
 
       <?php
@@ -55,7 +55,7 @@ if (count($commentsArray)) {
         echo '<h3 class="commenting-as">Commenting as: <span class="red">' . $_SESSION['userData']['user_first_name'] . ' ' . $_SESSION['userData']['user_last_name'] . '</span></h3>';
         $commentForm = "<form method='post' action='../index.php'>";
         $commentForm .= "<fieldset>";
-        $commentForm .= "<h2>Leave a Comment</h2>";
+        $commentForm .= "<h2 class='center'>Leave a Comment</h2>";
         $commentForm .= "<textarea rows='10' cols='45' name='comment_text' id='comment_text' required></textarea>";
         $commentForm .= "<input class='submit-comment' type='submit' value='Submit Comment'>";
         $commentForm .= "<input type='hidden' name='user_id' value='" . $user_id . "'>";
