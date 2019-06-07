@@ -51,8 +51,8 @@ function buildCommentsTable($commentsArray) {
     foreach ($userComments as $userComment){
       $uc .= '<div><p> '. date("F jS, Y", strtotime($userComment['comment_date'])).'</p>';
       $uc .= "<p><q><em>$userComment[comment_text]</em></q></p>";
-      $uc .= "<p><a class='delete' href='/acme/reviews/?action=deleteView&reviewId=" . urlencode($userComment['comment_id']) . "' title='Click here to delete review $userComment[comment_id].'>Delete</a>";
-      $uc .= "<a class='update' href='/acme/reviews/?action=updateView&reviewId=" . urlencode($userComment['comment_id']) . "' title='Click here to update review $userComment[comment_id].'>Update</a></p></div>";
+      $uc .= "<p><a class='delete' href='../index.php/?action=deleteComment&comment_id=" . urlencode($userComment['comment_id']) . "' title='Click here to delete this comment. $userComment[comment_id].'>Delete</a>";
+      $uc .= "<a class='update' href='../index.php/?action=updateComment&comment_id=" . urlencode($userComment['comment_id']) . "' title='Click here to update this comment. $userComment[comment_id].'>Update</a></p></div>";
     }
     $uc .= "</div>";
     

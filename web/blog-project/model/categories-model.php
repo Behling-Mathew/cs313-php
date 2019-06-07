@@ -147,3 +147,17 @@ function checkEmail($user_email) {
     return $userComments;
   }
 
+  // Delete a specific comment
+function deleteComment($commentId) {
+  // Create a connection
+    $db = dbConnect();
+  // The SQL statement to be used with the database
+    $sql = 'DELETE FROM comments WHERE comment_id = :commentId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':commentId', $CommentId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;  
+  }
+

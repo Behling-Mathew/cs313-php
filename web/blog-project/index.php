@@ -146,6 +146,25 @@ $action = filter_input(INPUT_POST, 'action');
       
       break;
 
+      case 'deleteComment':
+      $commentId = filter_input(INPUT_GET, 'comment_id', FILTER_SANTIZE_NUMBER_INT);
+      $deleteResult = deleteComment($commentId);
+
+      if ($deleteResult) {
+        $message = "<p class='message'>The comment was successfully deleted.</p>";
+        $_SESSION['message'] = $message;
+        header('location: index.php/?action=viewComments');
+        exit;
+      } else {
+        $message = "<p class='message'>Error: Comment was not deleted.</p>";
+        $_SESSION['message'] = $message;
+        header('location: index.php/?action=viewComments');
+        exit;
+      }
+      break;
+
+
+
     default:
      header('Location: view/home.php');
    }
