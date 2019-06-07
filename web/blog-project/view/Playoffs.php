@@ -1,7 +1,7 @@
 <?php
-require_once include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/library/connections.php';
-require_once include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/model/categories-model.php';
-require_once include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/library/functions.php';
+require_once '/blog-project/library/connections.php';
+require_once '/blog-project/model/categories-model.php';
+require_once '/blog-project/library/functions.php';
 session_start();
 $categories = getCategories();
 //echo '<pre>';
