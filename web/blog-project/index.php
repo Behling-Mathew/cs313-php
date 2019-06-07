@@ -155,7 +155,7 @@ $action = filter_input(INPUT_POST, 'action');
         header('location: /blog-project/index.php/?action=viewComments');
         exit;
       } else {
-        $message = "<p class='message'>Error: Comment was not deleted.</p>";
+        $message = "<p class='message'>Error: Comment was not deleted." . $commentId . "</p>";
         $_SESSION['message'] = $message;
         header('location: /blog-project/index.php/?action=viewComments');
         exit;
