@@ -30,8 +30,10 @@ $navList = buildNav($categories);
       <h2 class="players-heading">My Account</h2>
       <h4 class="text-center">My Comments</h4>
       <div class="comments-div">
-        <?php if (isset ($userCommentsDisplay)) {
+        <?php if ($_SESSION['hasComments'] = TRUE) {
           echo $userCommentsDisplay; 
+        } else {
+          echo "<h4 class='text-center'>You currently have no comments.</h4>";
         } ?>
       </div>
     </main>
