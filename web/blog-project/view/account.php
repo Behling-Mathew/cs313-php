@@ -27,8 +27,10 @@ $navList = buildNav($categories);
       }
       ?> 
         
-     <h2 class="players-heading">Accounts</h2>
-    <?php echo $userCommentsDisplay; ?>
+      <h2 class="players-heading">Accounts</h2>
+      <div class="comments-div">
+        <?php echo $userCommentsDisplay; ?>
+      </div>
     </main>
     <footer>
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
