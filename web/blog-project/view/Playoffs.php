@@ -92,7 +92,7 @@ if (count($commentsArray)) {
     </table> 
 
       <?php
-        $user_id = $_SESSION['userData']['user_id'];
+       /*  $user_id = $_SESSION['userData']['user_id'];
         $userComments = getCommentsByUser($user_id);
  
         $userCommentsDisplay = buildUserComments($userComments);
@@ -106,7 +106,9 @@ if (count($commentsArray)) {
          echo $userCommentsDisplay;
          //header('Location: view/home.php');
          //exit;
-       }
+       } */
+
+       echo $userCommentsDisplay;
       ?>
 
       
