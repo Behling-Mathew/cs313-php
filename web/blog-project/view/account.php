@@ -30,7 +30,9 @@ $navList = buildNav($categories);
       <h2 class="players-heading">My Account</h2>
       <h4 class="text-center">My Comments</h4>
       <div class="comments-div">
-        <?php echo $userCommentsDisplay; ?>
+        <?php if (isset ($userCommentsDisplay)) {
+          echo $userCommentsDisplay; 
+        } ?>
       </div>
     </main>
     <footer>
