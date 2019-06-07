@@ -264,3 +264,19 @@ form.form  {
 .img-border {
     border: 4px solid white;
 }
+
+a.delete, a.update {
+    color: #ffffff;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: solid 1px #ffffff;
+    text-align: center;
+    background-color: #222629;
+  }
+  
+  a.delete:nth-child(odd):hover {
+    background-color: red;
+  }
+  a.update:nth-child(even):hover {
+    background-color: green; 
+  }
