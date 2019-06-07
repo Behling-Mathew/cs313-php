@@ -165,13 +165,29 @@ footer a {
     color: white;
     border: 3px solid black;
 }
+#account {
+    display: inline;
+    position: relative;
+    left: 630px;
+    bottom: 35px;
+    background-color: #86c232;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: 3px solid black;
+}
+#account:hover {
+    background-color: #222629;
+    color: white; 
+    border: 3px solid #86c232; 
+}
 
 #welcome {
     display: inline;
     color: #cc0000;
     position: relative;
-    left: 600px;
-    bottom: 31px;
+    left: 520px;
+    bottom: -11px;
 }
 
 input.submit-comment{
