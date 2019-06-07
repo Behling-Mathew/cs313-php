@@ -110,6 +110,7 @@ if (count($commentsArray)) {
 
        echo $userCommentsDisplay;
       ?>
+      <a href="../index.php?action=viewComments" title="View Comments">View User Comments</a>
 
       
     </main>
