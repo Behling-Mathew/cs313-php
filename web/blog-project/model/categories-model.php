@@ -154,7 +154,7 @@ function deleteComment($commentId) {
   // The SQL statement to be used with the database
     $sql = 'DELETE FROM comments WHERE comment_id = :commentId';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':commentId', $CommentId, PDO::PARAM_INT);
+    $stmt->bindValue(':commentId', $commentId, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();

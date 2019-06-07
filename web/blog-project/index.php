@@ -139,7 +139,6 @@ $action = filter_input(INPUT_POST, 'action');
         exit;
       } else {
         $userCommentsDisplay = buildUserComments($userComments);
-        $_SESSION['message'] = "<p class='message'>Comments retrieved.</p>";
         include 'view/account.php';
         exit;
       }
