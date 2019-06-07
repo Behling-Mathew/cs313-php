@@ -133,5 +133,17 @@ function checkEmail($user_email) {
     $stmt->closeCursor();
     // Return the indication of success (rows changed)
     return $rowsChanged;
-  }  
+  }
+  
+  // Get the comments left by a specific user
+  function getCommentsByUser($user_id) {
+    $db = dbConnect();
+    $sql = 'SELECT comment_id, comment_date, comment_text, user_id FROM comments WHERE user_id = :user_id ORDER BY comment_date DESC';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':user_id', $clientI$user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $userComments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $userComments;
+  }
 

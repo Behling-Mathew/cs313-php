@@ -44,3 +44,17 @@ function buildCommentsTable($commentsArray) {
     }
     return $ca;
 }
+
+ //Build a display for comments for a specific user
+ function buildUserComments($userComments){
+    $uc = "<div>";
+    foreach ($userComments as $userComment){
+      $uc .= '<div><p> '. date("F jS, Y", strtotime($userComment['comment_date'])).'</p>';
+      $uc .= "<p><q><em>$userComment[comment_text]</em></q></p>";
+      $uc .= "<p><a class='delete' href='/acme/reviews/?action=deleteView&reviewId=" . urlencode($userComment['comment_id']) . "' title='Click here to delete review $userComment[comment_id].'>Delete</a>";
+      $uc .= "<a class='update' href='/acme/reviews/?action=updateView&reviewId=" . urlencode($userComment['comment_id']) . "' title='Click here to update review $userComment[comment_id].'>Update</a></p></div>";
+    }
+    $uc .= "</div>";
+    
+    return $uc;
+  }

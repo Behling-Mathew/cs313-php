@@ -91,6 +91,25 @@ if (count($commentsArray)) {
         </tfoot>
     </table> 
 
+      <?php
+        $user_id = $_SESSION['userData']['user_id'];
+        $userComments = getCommentsByUser($user_id);
+ 
+        $userCommentsDisplay = buildUserComments($userComments);
+        if (!count($userComments)) {
+         $_SESSION['message'] = "<p class='message'>No comments were found.</p>";
+         header('Location: view/home.php');
+         exit;
+       } else {
+         $userCommentsDisplay = buildUserComments($userComments);
+         $_SESSION['message'] = "<p class='message'>Comments retrieved.</p>";
+         echo $userCommentsDisplay;
+         //header('Location: view/home.php');
+         //exit;
+       }
+      ?>
+
+      
     </main>
     <footer>
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |

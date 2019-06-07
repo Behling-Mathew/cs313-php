@@ -128,6 +128,24 @@ $action = filter_input(INPUT_POST, 'action');
 
        break;
 
+       case 'viewComments':
+       $user_id = $_SESSION['userData']['user_id'];
+       $userComments = getCommentsByUser($user_id);
+
+       $userCommentsDisplay = buildUserComments($userComments);
+       if (!count($userComments)) {
+        $_SESSION['message'] = "<p class='message'>No comments were found.</p>";
+        header('Location: view/home.php');
+        exit;
+      } else {
+        $userCommentsDisplay = buildUserComments($userComments);
+        $_SESSION['message'] = "<p class='message'>Comments retrieved.</p>";
+        header('Location: view/home.php');
+        exit;
+      }
+      
+      break;
+
     default:
      header('Location: view/home.php');
    }
