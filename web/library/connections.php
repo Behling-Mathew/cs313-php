@@ -1,5 +1,5 @@
 <?php
-try
+/* try
 {
   $dbUrl = getenv('DATABASE_URL');
 
@@ -52,4 +52,4 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //PDO prepared style 2
 $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 $stmt->execute(array(':name' => $name, ':id' => $id));
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
