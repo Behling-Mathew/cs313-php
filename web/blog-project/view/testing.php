@@ -70,7 +70,9 @@
           <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="johnsmith@example.com" required></label>
           <label for="user_password">Password</label> 
           <input type="password" name="user_password" id="user_password" required>
-          <input class="submit-button" type="submit" value="Register">
+          <label for="verify_user_password">Confirm Password</label>
+          <input type="password" name="verify_user_password" id="verify_user_password" required>
+          <input class="submit-button" type="submit" value="Register" required>
           <!-- Add the action name - value pair -->
           <input type="hidden" name="action" value="register">
         </fieldset>  
@@ -121,7 +123,8 @@
         <p class="footer-p">&copy;This website is solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
             <?php echo date('l, d F Y') ?></p>
     </footer>
-    <script src="/blog-project/js/hamburger.js"></script>    
+    <script src="/blog-project/js/hamburger.js"></script> 
+    <script src="/blog-project/js/match-passwords.js"></script>     
   </body>
   <script>
   $(document).ready(function() {

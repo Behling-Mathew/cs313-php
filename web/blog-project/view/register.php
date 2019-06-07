@@ -44,6 +44,8 @@ $navList = buildNav($categories);
           <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="johnsmith@example.com" <?php if(isset($user_email)){echo "value='$user_email'";}  ?> required></label>
           <label for="user_password">Password</label> 
           <input type="password" name="user_password" id="user_password" required>
+          <label for="verify_user_password">Confirm Password</label>
+          <input type="password" name="verify_user_password" id="verify_user_password" required>
           <input class="submit-button" type="submit" value="Register">
           <!-- Add the action name - value pair -->
           <input type="hidden" name="action" value="register">
@@ -57,7 +59,8 @@ $navList = buildNav($categories);
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |
             <?php echo date('l, d F Y') ?></p>
     </footer>
-    <script src="/blog-project/js/hamburger.js"></script>    
+    <script src="/blog-project/js/hamburger.js"></script>
+    <script src="/blog-project/js/match-passwords.js"></script>     
   </body>
   <script>
   $(document).ready(function() {$('#players').DataTable();}
