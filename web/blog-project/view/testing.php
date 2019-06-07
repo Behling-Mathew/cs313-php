@@ -24,6 +24,7 @@
     <?php
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
         echo '<a id="logout" href="../index.php?action=logout" title="logout">Logout</a>';
+        echo '<a id="account" href="../index.php?action=viewComments" title="My Account">My Account</a>';
       } else {
         echo '<a id="login" href="../index.php?action=login" title="Account Menu">Login</a>';
       }
