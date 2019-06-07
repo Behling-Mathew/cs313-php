@@ -37,36 +37,12 @@ if (count($playersArray)) {
   <body>
     <header>
     <h1 class="site-name">Sports Blog</h1>
-    <?php
-      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
-        echo '<a id="logout" href="../index.php?action=logout" title="logout">Logout</a>';
-      } else {
-        echo '<a id="login" href="../index.php?action=login" title="Account Menu">Login</a>';
-      }
-    ?>
+      <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
-      
-      
+
       <?php echo $navList; ?>
 
-      <!-- <button class="toggle-button" onclick="toggleMenu()">&#9776;</button>
-      
-      <div class="menu-outer" id="nav-bar-hide">
-          
-          <div class="table">
-              
-              <ul class="main-nav" id="nav-hide">
-              
-                  <li><a class="active" href="/acme/home.php" title="ACME Home Page">Home</a></li>
-                  <li><a href="#" title="ACME Cannon Page">Cannon</a></li>
-                  <li><a href="#" title="ACME Explosive Page">Explosive</a></li>
-                  <li><a href="#" title="ACME Misc Page">Misc</a></li>
-                  <li><a href="#" title="ACME Rocket Page">Rocket</a></li>
-                  <li><a href="#" title="ACME Trap Page">Trap</a></li>
-              </ul>
-          </div>
-      </div> -->
-    </nav>
+      </nav>
     </header>
     
     <main>

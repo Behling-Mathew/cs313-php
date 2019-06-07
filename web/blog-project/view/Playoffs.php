@@ -32,14 +32,14 @@ if (count($commentsArray)) {
   </head>
   <body>
     <header>
-    <h1 class="site-name">Sports Blog</h1>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
+      <h1 class="site-name">Sports Blog</h1>
+      <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
       
       
       <?php echo $navList; ?>
 
-    </nav>
+      </nav>
     </header>
     
     <main>
