@@ -140,7 +140,7 @@ $action = filter_input(INPUT_POST, 'action');
       } else {
         $userCommentsDisplay = buildUserComments($userComments);
         $_SESSION['message'] = "<p class='message'>Comments retrieved.</p>";
-        include 'view/Playoffs.php';
+        include 'view/account.php';
         exit;
       }
       

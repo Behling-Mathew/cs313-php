@@ -1,7 +1,7 @@
 <?php
-require_once '/blog-project/library/connections.php';
-require_once '/blog-project/model/categories-model.php';
-require_once '/blog-project/library/functions.php';
+require_once '../blog-project/library/connections.php';
+require_once '../blog-project/model/categories-model.php';
+require_once '../library/functions.php';
 session_start();
 $categories = getCategories();
 //echo '<pre>';
@@ -108,7 +108,7 @@ if (count($commentsArray)) {
          //exit;
        } */
 
-       echo $userCommentsDisplay;
+       
       ?>
       <a href="../index.php?action=viewComments" title="View Comments">View User Comments</a>
 
