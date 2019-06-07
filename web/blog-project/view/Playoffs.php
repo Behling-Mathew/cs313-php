@@ -1,6 +1,6 @@
 <?php
-require_once '../blog-project/library/connections.php';
-require_once '../blog-project/model/categories-model.php';
+require_once '../library/connections.php';
+require_once '../model/categories-model.php';
 require_once '../library/functions.php';
 session_start();
 $categories = getCategories();
