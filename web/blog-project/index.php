@@ -140,9 +140,8 @@ $action = filter_input(INPUT_POST, 'action');
       } else {
         $userCommentsDisplay = buildUserComments($userComments);
         $_SESSION['message'] = "<p class='message'>Comments retrieved.</p>";
-        include 'Playoffs.php';
-        //header('Location: view/home.php');
-        //exit;
+        header('Location: view/Playoffs.php');
+        exit;
       }
       
       break;
