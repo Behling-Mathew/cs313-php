@@ -153,12 +153,12 @@ $action = filter_input(INPUT_POST, 'action');
       if ($deleteResult) {
         $message = "<p class='message'>The comment was successfully deleted.</p>";
         $_SESSION['message'] = $message;
-        header('location: index.php/?action=viewComments');
+        header('location: /blog-project/index.php/?action=viewComments');
         exit;
       } else {
         $message = "<p class='message'>Error: Comment was not deleted.</p>";
         $_SESSION['message'] = $message;
-        header('location: index.php/?action=viewComments');
+        header('location: /blog-project/index.php/?action=viewComments');
         exit;
       }
       break;
