@@ -25,17 +25,11 @@ $navList = buildNav($categories);
   </head>
   <body>
     <header>
-    <h1 class="site-name">Sports Blog</h1>
-    <?php
-      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
-        echo '<a id="logout" href="../index.php?action=logout" title="logout">Logout</a>';
-      } else {
-        echo '<a id="login" href="../index.php?action=login" title="Account Menu">Login</a>';
-      }
-    ?>
+      <h1 class="site-name">Sports Blog</h1>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
-      <?php echo $navList; ?>
-    </nav>
+        <?php echo $navList; ?>
+      </nav>
     </header>
     
     <main>

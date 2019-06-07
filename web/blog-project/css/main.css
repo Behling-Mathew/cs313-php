@@ -166,6 +166,14 @@ footer a {
     border: 3px solid black;
 }
 
+#welcome {
+    display: inline;
+    color: #cc0000;
+    position: relative;
+    left: 600px;
+    bottom: 31px;
+}
+
 input.submit-comment{
     display: block;
     color: #86c232;
