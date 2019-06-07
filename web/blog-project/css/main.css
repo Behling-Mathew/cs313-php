@@ -180,6 +180,8 @@ input.submit-comment{
     border-radius: 10px;
     margin-bottom: 40px;
     font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 input.submit-comment:hover {
@@ -215,4 +217,19 @@ form.form  {
     margin-bottom: 1rem;
     padding: 15px;
     color: #ffd24b;
+}
+
+.question {
+    color: #cc0000;
+}
+.red {
+    color: #cc0000;
+}
+.commenting-as {
+    font-size: .9rem;
+}
+#comment_text {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }

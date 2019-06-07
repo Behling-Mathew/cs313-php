@@ -45,15 +45,14 @@ if (count($commentsArray)) {
         
      <h2 class="players-heading">Playoffs 2019</h2>
      <img src="/blog-project/images/bracket.PNG" alt="2019 Playoffs Bracket" width="960">
-     <h3 class="players-heading">Who do you think will win?</h3>
+     <h3 class="players-heading question">Who do you think will win?</h3>
 
-     <h3>Add a Comment</h3>
       <?php
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE) {
 
         $user_id = $_SESSION['userData']['user_id'];
         $userData = $_SESSION['userData'];
-        echo '<h3>Commenting as: ' . $_SESSION['userData']['user_first_name'] . ' ' . $_SESSION['userData']['user_last_name'] . '</h3>';
+        echo '<h3 class="commenting-as">Commenting as: <span class="red">' . $_SESSION['userData']['user_first_name'] . ' ' . $_SESSION['userData']['user_last_name'] . '</span></h3>';
         $commentForm = "<form method='post' action='../index.php'>";
         $commentForm .= "<fieldset>";
         $commentForm .= "<h2>Leave a Comment</h2>";
