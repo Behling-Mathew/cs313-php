@@ -43,7 +43,7 @@ if (count($playersArray)) {
         $_SESSION['message'] = NULL;
       }
       ?> 
-    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><h2 class="players-heading">The 2019 Finals are underway! Click to join the discussion.</h2></a>
+    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><h2 class="players-heading home">The 2019 Finals are underway! Click to join the discussion.</h2></a>
     <a href="/blog-project/view/Playoffs.php" title="Playoffs"><img class="img-border" src="/blog-project/images/curry-leonard.jpg" alt="Kawhi Leonard and Steph Curry" width="960"></a>  
 
     </main>
@@ -54,7 +54,4 @@ if (count($playersArray)) {
     <script src="/blog-project/js/hamburger.js"></script>    
   </body>
   <script>
-  $(document).ready(function() {
-    $('#players').DataTable();
-} ); </script>
 </html>
