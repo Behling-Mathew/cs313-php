@@ -1,6 +1,10 @@
 <?php
-$categories = getCategories();
-$navList = buildNav($categories);
+  if(!$_SESSION['loggedin']){
+    header("Location: /blog-project/");
+    exit;
+  }
+  $categories = getCategories();
+  $navList = buildNav($categories);
 ?>
 <!DOCTYPE html>
 <html lang="en">
