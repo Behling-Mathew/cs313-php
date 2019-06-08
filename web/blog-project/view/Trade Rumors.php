@@ -8,6 +8,7 @@ $categories = getCategories();
 //print_r($categories);
 //echo '</pre>';
 $navList = buildNav($categories);
+$playersArray = getPlayers();
 
 ?>
 <!DOCTYPE html>
@@ -31,6 +32,24 @@ $navList = buildNav($categories);
      <h2 class="players-heading">Trade Rumors</h2>
      <img src="/blog-project/images/davis-lebron.png" alt="Anthony Davis and LeBron James" width="960">
      <h3 class="players-heading">Anthony Davis wants out, but what will it cost?</h3>
+
+     <?php
+        $id = '<div class="trade-players">';
+        foreach ($playersArray as $x) {
+          if ($x[last_name] == 'Kuzma' || $x[last_name] == 'Ingram' || $x[last_name] == 'Ball' || $x[last_name] == 'Zubac'){
+            $id .= '<tr>';
+            $id .= '<td><img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '"></td>';
+            $id .= '<td>' . $x['first_name'] . '</td>';
+            $id .= '<td>' . $x['last_name'] . '</td>';
+            $id .= '<td>' . $x['team'] . '</td>';
+            $id .= '<td>' . $x['salary'] . '</td>';
+            $id .= '<td>' . $x['age'] . '</td>';
+            $id .= '</tr>';
+        }
+      }
+      $id .= '</div>';
+      echo $id;
+     ?>
 
     </main>
     <footer>
