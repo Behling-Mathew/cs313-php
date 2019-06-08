@@ -161,3 +161,14 @@ function deleteComment($commentId) {
     return $rowsChanged;  
   }
 
+  function getCommentById($commentId) {
+    $db = dbConnect();
+    $sql = 'SELECT * FROM comments WHERE comment_id = :commentId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':commentId', $commentId, PDO::PARAM_INT);
+    $stmt->execute();
+    $commentById = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $commentById;
+  }
+

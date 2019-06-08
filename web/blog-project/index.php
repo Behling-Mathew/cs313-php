@@ -164,6 +164,18 @@ $action = filter_input(INPUT_POST, 'action');
       }
       break;
 
+      case 'updateCommentView':
+      $commentId = filter_input(INPUT_GET, 'commentId');
+      $toUpdate = getCommentById($commentId);
+      if (!count($toUpdate)) {
+        $_SESSION['message'] = "<p class='message'>Error. This comment cannot be updated at this time.</p>";
+        exit;
+      } else {
+        include 'view/comment-update.php';
+      }
+      break;
+      
+
 
 
     default:

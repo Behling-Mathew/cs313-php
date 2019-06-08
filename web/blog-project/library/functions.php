@@ -52,7 +52,7 @@ function buildCommentsTable($commentsArray) {
       $uc .= '<div><p> '. date("F jS, Y", strtotime($userComment['comment_date'])).'</p>';
       $uc .= "<p><q><em>$userComment[comment_text]</em></q></p>";
       $uc .= "<p><a class='delete' href='/blog-project/index.php?action=deleteComment&commentId=" . urlencode($userComment['comment_id']) . "' title='Click here to delete this comment. $userComment[comment_id].'>Delete</a>";
-      $uc .= "<a class='update' href='/blog-project/index.php?action=updateComment&commentId=" . urlencode($userComment['comment_id']) . "' title='Click here to update this comment. $userComment[comment_id].'>Update</a></p></div>";
+      $uc .= "<a class='update' href='/blog-project/index.php?action=updateCommentView&commentId=" . urlencode($userComment['comment_id']) . "' title='Click here to update this comment. $userComment[comment_id].'>Update</a></p></div>";
     }
     $uc .= "</div>";
     
