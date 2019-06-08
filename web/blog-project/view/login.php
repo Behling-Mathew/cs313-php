@@ -39,7 +39,7 @@ $navList = buildNav($categories);
 
      <form class="form" method="post" action="../index.php">
         <fieldset>
-          <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="roadrunner@acme.com" <?php if(isset($user_email)){echo "value='$user_email'";}  ?> required></label>
+          <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="johnsmith@gmail.com" <?php if(isset($user_email)){echo "value='$user_email'";}  ?> required></label>
           <label>Password<input type="password" name="user_password" id="user_password" required></label> 
           <input type="submit" value="Login" class="submit-button">
           <input type="hidden" name="action" value="Login2">
