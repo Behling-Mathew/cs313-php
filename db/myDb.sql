@@ -25,7 +25,7 @@ CREATE TABLE comments
 
 
 CREATE TABLE players 
-( player_id           SERIAL          PRIMARY KEY
+( player_id           SERIAL         PRIMARY KEY
 , first_name          VARCHAR(50)    NOT NULL
 , last_name           VARCHAR(50)    NOT NULL
 , team                VARCHAR(50)    NOT NULL
@@ -33,6 +33,8 @@ CREATE TABLE players
 , age                 INT            NOT NULL   
 , img_path            VARCHAR(150)   NOT NULL);
 
+
+-- Player Inserts
 INSERT INTO players(first_name, last_name, team, salary, age, img_path) VALUES 
 ('Stephen', 'Curry', 'Golden State Warriors', '$37,457,154', 31, '/blog-project/images/players/curry.png'),
 ('Anthony', 'Davis', 'New Orleans Pelicans', '$25,434,263', 26, '/blog-project/images/players/davis.png'),
@@ -55,8 +57,16 @@ INSERT INTO players(first_name, last_name, team, salary, age, img_path) VALUES
 ('Chris', 'Paul', 'Houston Rockets', '$35,654,150', 34, '/blog-project/images/players/paul.png'),
 ('Nikola', 'Jokic', 'Denver Nuggets', '$24,605,181', 24, '/blog-project/images/players/joker.png');
 
+-- Second round of player inserts
+INSERT INTO players(first_name, last_name, team, salary, age, img_path) VALUES 
+('Lonzo', 'Ball', 'Los Angeles Lakers', '$7,461,960', 21, '/blog-project/images/players/lonzo.png'),
+('Brandon', 'Ingram', 'Los Angeles Lakers', '$5,757,120', 21, '/blog-project/images/players/ingram.png'),
+('Kyle', 'Kuzma', 'Los Angeles Lakers', '$1,689,840', 23, '/blog-project/images/players/kuzma.png'),
+('Ivica', 'Zubac', 'Los Angeles Clippers', '$1,544,951', 22, '/blog-project/images/players/zubac.png');
 
--- Additional inserts after the fact
+
+-- Initial User Inserts
+-- Note that password hashing is now implemented so these do not reflect what is stored in the database
 INSERT INTO users(user_first_name, user_last_name, user_email, user_password) VALUES 
 ('Tony', 'Stark', 'ironman@gmail.com', 'pepper123'),
 ('Bruce', 'Banner', 'hulk@gmail.com', 'smash!'),
@@ -66,6 +76,7 @@ INSERT INTO users(user_first_name, user_last_name, user_email, user_password) VA
 ('Natasha', 'Romanoff', 'blackwidow@gmail.com', '123456'),
 ('Stephen', 'Strange', 'drstrange@gmail.com', 'knowledge123');
 
+-- comment inserts
 INSERT INTO comments(user_id, img_id, comment_text) VALUES 
 (2, 3, 'Curry is amazing! Golden State will win again.'),
 (3, 4, 'Even without Durant, Warriors are going to win.'),
