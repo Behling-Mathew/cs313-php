@@ -185,7 +185,7 @@ $action = filter_input(INPUT_POST, 'action');
     if (empty($commentId) || empty($commentText)) {
       
       $_SESSION['message'] = "<p class='message'>Form cannot be empty.</p>";
-      header('Location: /blog-project/?action=updateCommentView&commentId=' . $commentId ."'");
+      header("Location: /blog-project/?action=updateCommentView&commentId='" . $commentId ."'");
       exit;
     }
 
