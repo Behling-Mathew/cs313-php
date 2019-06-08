@@ -43,32 +43,8 @@ if (count($playersArray)) {
         $_SESSION['message'] = NULL;
       }
       ?> 
-    <h2 class="players-heading">Welcome to the home page. This site is still being built, but has some features currently available.</h2>
-     <table id="players" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Portrait</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Team</th>
-                <th>Salary</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-          <?php echo $playerDisplay; ?> 
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Portrait</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Team</th>
-                <th>Salary</th>
-                <th>Age</th>
-            </tr>
-        </tfoot>
-    </table>  
+    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><h2 class="players-heading">The 2019 Finals are underway! Click to join the discussion.</h2></a>
+    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><img src="/blog-project/images/curry-leonard.jpg" alt="Kawhi Leonard and Steph Curry" width="960"></a>  
 
     </main>
     <footer>
