@@ -25,7 +25,7 @@ if (count($commentsArray)) {
   </head>
   <body>
     <header>
-      <h1 class="site-name">Sports Blog</h1>
+      <a href="/blog-project/view/home.php"><h1 class="site-name">Sports Blog</h1></a>
       <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
       

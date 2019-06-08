@@ -29,7 +29,7 @@ if (count($playersArray)) {
   </head>
   <body>
     <header>
-      <h1 class="site-name">Sports Blog</h1>
+        <a href="/blog-project/view/home.php"><h1 class="site-name">Sports Blog</h1></a>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
         <?php echo $navList; ?>
@@ -44,7 +44,7 @@ if (count($playersArray)) {
       }
       ?> 
     <a href="/blog-project/view/Playoffs.php" title="Playoffs"><h2 class="players-heading">The 2019 Finals are underway! Click to join the discussion.</h2></a>
-    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><img src="/blog-project/images/curry-leonard.jpg" alt="Kawhi Leonard and Steph Curry" width="960"></a>  
+    <a href="/blog-project/view/Playoffs.php" title="Playoffs"><img class="img-border" src="/blog-project/images/curry-leonard.jpg" alt="Kawhi Leonard and Steph Curry" width="960"></a>  
 
     </main>
     <footer>

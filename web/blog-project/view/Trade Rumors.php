@@ -20,8 +20,8 @@ $playersArray = getPlayers();
   </head>
   <body>
     <header>
-      <h1 class="site-name">Sports Blog</h1>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
+      <a href="/blog-project/view/home.php"><h1 class="site-name">Sports Blog</h1></a>
+      <?php include $_SERVER['DOCUMENT_ROOT'] . '/blog-project/common/header.php'; ?>
       <nav>
         <?php echo $navList; ?>
       </nav>
@@ -30,7 +30,7 @@ $playersArray = getPlayers();
     <main>
         
      <h2 class="players-heading">Trade Rumors</h2>
-     <img src="/blog-project/images/davis-lebron.png" alt="Anthony Davis and LeBron James" width="960">
+     <img class="img-border" src="/blog-project/images/davis-lebron.png" alt="Anthony Davis and LeBron James" width="960">
      <h3 class="players-heading">Anthony Davis wants out, but what will it cost?</h3>
      <p class='rumor-report'>Reports state that the Lakers offered the following four players with a first-round pick to the Pelicans for Davis.  The Pelicans refused, which lead us to believe they were never considering any serious offers to begin with.</p>
 
