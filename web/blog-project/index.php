@@ -179,7 +179,7 @@ $action = filter_input(INPUT_POST, 'action');
       case 'updateComment':
       $commentId = filter_input(INPUT_GET, 'comment_id');
       $commentText = filter_input(INPUT_GET, 'comment_text');
-      $toUpdate = getCommentsById($commentId);
+      $toUpdate = getCommentById($commentId);
 
       // Check for missing data
     if (empty($commentId) || empty($commentText)) {
