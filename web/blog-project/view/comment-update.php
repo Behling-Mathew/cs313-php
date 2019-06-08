@@ -28,7 +28,7 @@ $navList = buildNav($categories);
         
       <h2 class="players-heading">Update Comment</h2>
       <h4 class="text-center">My Comments</h4>
-      <?php var_dump($toUpdate); ?>
+      
       
       
            <form method='post' action='/blog-project/'>
@@ -38,12 +38,13 @@ $navList = buildNav($categories);
          } elseif (isset($toUpdate['comment_text'])) {
            echo $toUpdate['comment_text'];
          } ?></textarea>
-             <input type='submit' value='Update Comment' class='submit-button'>
+             <input type='submit' value='Update Comment' class='submit-button update-submit'>
              <input type='hidden' name='action' value='updateComment'>
              <input type='hidden' name='comment_id' value="<?php if (isset($toUpdate['comment_id'])) {
            echo $toUpdate['comment_id'];
          } elseif (isset($comment_id)) {
-           echo $comment_id; } ?>">
+           echo $comment_id; 
+         } ?>">
            </fieldset>
          </form> 
        

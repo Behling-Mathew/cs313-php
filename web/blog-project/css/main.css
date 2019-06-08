@@ -299,3 +299,16 @@ h4.text-center {
     text-align: center;
     padding: 10px;
 }
+
+.update_submit {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.register-here {
+    font-weight: bold;
+    color: #86c232;
+}
+.register-here:hover {
+    color: white;
+}

@@ -37,7 +37,7 @@ $navList = buildNav($categories);
      <h2 class="players-heading">Login</h2>
      
 
-     <form method="post" action="../index.php">
+     <form class="form" method="post" action="../index.php">
         <fieldset>
           <label>Email Address<input type="email" name="user_email" id="user_email" placeholder="roadrunner@acme.com" <?php if(isset($user_email)){echo "value='$user_email'";}  ?> required></label>
           <label>Password<input type="password" name="user_password" id="user_password" required></label> 
@@ -47,7 +47,7 @@ $navList = buildNav($categories);
       </form>
 
       <h3>Not a member?</h3>
-      <a href='register.php' title="Create Account"><p class="white">Register here</p></a>
+      <a href='register.php' title="Create Account"><p class="register-here">Register here</p></a>
 
     </main>
     <footer>
