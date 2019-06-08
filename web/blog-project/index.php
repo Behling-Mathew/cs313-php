@@ -136,7 +136,7 @@ $action = filter_input(INPUT_POST, 'action');
        if (!count($userComments)) {
         $_SESSION['message'] = "<p class='message'>No comments were found.</p>";
         $_SESSION['hasComments'] = FALSE;
-        header('Location: view/account.php');
+        include 'view/account.php';
         exit;
       } else {
         $userCommentsDisplay = buildUserComments($userComments);
