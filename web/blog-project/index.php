@@ -175,6 +175,34 @@ $action = filter_input(INPUT_POST, 'action');
         include 'view/comment-update.php';
       }
       break;
+
+      case 'updateComment':
+      $commentId = filter_input(INPUT_GET, 'comment_id');
+      $commentText = filter_input(INPUT_GET), 'comment_text');
+      $toUpdate = getCommentsById($commentId);
+
+      // Check for missing data
+    if (empty($commentId) || empty($commentText)) {
+      
+      $_SESSION['message'] = "<p class='message'>Form cannot be empty.</p>";
+      header('Location: /blog-project/?action=updateCommentView&commentId=' . $commentId ."'");
+      exit;
+    }
+
+    $updateOutcome = updateComment($commentText, $commentId);
+
+    if ($updateOutcome === 1) {
+      $_SESSION['message'] = "<p class='message'>The update has been successfully recorded!</p>";
+      header('location: /blog-project/index.php/?action=viewComments');
+      exit;
+    } else {
+      $_SESSION['message'] = "<p class='message'>Error. The comment was not updated.</p>";
+      header('location: /blog-project/index.php/?action=viewComments');
+      exit;
+    }
+    break;
+
+
       
 
 

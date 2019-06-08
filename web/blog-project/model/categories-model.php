@@ -172,3 +172,21 @@ function deleteComment($commentId) {
     return $commentById;
   }
 
+  function updateComment($comment_text, $comment_id) {
+    // Create a connection object using the acme connection function
+    $db = dbConnect();
+    // The SQL statement
+    $sql = 'UPDATE comments SET comment_text = :comment_text WHERE comment_id = :comment_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':comment_id', $comment_id, PDO::PARAM_INT);
+    $stmt->bindValue(':comment_text', $comment_text, PDO::PARAM_STR);
+    //Insert the data
+    $stmt->execute();
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+    // Close the database interaction
+    $stmt->closeCursor();
+    // Return the indication of success (rows changed)
+    return $rowsChanged;
+  }
+
