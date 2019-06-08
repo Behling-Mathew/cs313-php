@@ -32,6 +32,7 @@ $playersArray = getPlayers();
      <h2 class="players-heading">Trade Rumors</h2>
      <img src="/blog-project/images/davis-lebron.png" alt="Anthony Davis and LeBron James" width="960">
      <h3 class="players-heading">Anthony Davis wants out, but what will it cost?</h3>
+     <p class='rumor-report'>Reports state that the Lakers offered the following four players with a first-round pick to the Pelicans for Davis.  The Pelicans refused, which lead us to believe they were never considering any serious offers to begin with.</p>
 
      <?php
         $id = '<div class="trade-players">';
@@ -41,8 +42,8 @@ $playersArray = getPlayers();
             $id .= '<img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '">';
             $id .= '<p>' . $x['first_name'] . ' ' . $x['last_name'] . '</p>';
             $id .= '<p>' . $x['team'] . '</p>';
-            $id .= '<p>' . $x['salary'] . '</p>';
-            $id .= '<p>' . $x['age'] . '</p>';
+            $id .= '<p>Salary: ' . $x['salary'] . '</p>';
+            $id .= '<p>Age: ' . $x['age'] . '</p>';
            
         }
       }

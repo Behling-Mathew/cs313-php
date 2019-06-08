@@ -312,3 +312,18 @@ h4.text-center {
 .register-here:hover {
     color: white;
 }
+
+div.trade-players {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+div.trade-players p {
+    
+    position: relative; 
+    bottom: 190px;
+    left: 540px;
+    color: black;
+    font-size: 1.2rem;
+    
+}
