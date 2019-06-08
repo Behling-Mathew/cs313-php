@@ -28,7 +28,7 @@ $navList = buildNav($categories);
         
       <h2 class="players-heading">Update Comment</h2>
       <h4 class="text-center">My Comments</h4>
-      <?php vardump($toUpdate); ?>
+      <?php var_dump($toUpdate); ?>
       
       
            <form method='post' action='/blog-project/'>
