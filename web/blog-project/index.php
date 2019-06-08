@@ -177,8 +177,8 @@ $action = filter_input(INPUT_POST, 'action');
       break;
 
       case 'updateComment':
-      $commentId = filter_input(INPUT_POST, 'comment_id');
-      $commentText = filter_input(INPUT_POST, 'comment_text');
+      $commentId = filter_input(INPUT_POST, 'comment_id', FILTER_SANITIZE_NUMBER_INT);
+      $commentText = filter_input(INPUT_POST, 'comment_text', FILTER_SANITIZE_STRING);
       $toUpdate = getCommentById($commentId);
 
       // Check for missing data
