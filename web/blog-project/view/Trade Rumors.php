@@ -37,14 +37,13 @@ $playersArray = getPlayers();
         $id = '<div class="trade-players">';
         foreach ($playersArray as $x) {
           if ($x[last_name] == 'Kuzma' || $x[last_name] == 'Ingram' || $x[last_name] == 'Ball' || $x[last_name] == 'Zubac'){
-            $id .= '<tr>';
-            $id .= '<td><img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '"></td>';
-            $id .= '<td>' . $x['first_name'] . '</td>';
-            $id .= '<td>' . $x['last_name'] . '</td>';
-            $id .= '<td>' . $x['team'] . '</td>';
-            $id .= '<td>' . $x['salary'] . '</td>';
-            $id .= '<td>' . $x['age'] . '</td>';
-            $id .= '</tr>';
+           
+            $id .= '<img class="player-image" src="' . $x['img_path'] . '" alt="Player image of ' . $x['first_name'] . " " . $x['last_name'] . '">';
+            $id .= '<p>' . $x['first_name'] . ' ' . $x['last_name'] . '</p>';
+            $id .= '<p>' . $x['team'] . '</p>';
+            $id .= '<p>' . $x['salary'] . '</p>';
+            $id .= '<p>' . $x['age'] . '</p>';
+           
         }
       }
       $id .= '</div>';
