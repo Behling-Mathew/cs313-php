@@ -29,7 +29,7 @@ $navList = buildNav($categories);
       <h2 class="players-heading">Update Comment</h2>
       <h4 class="text-center">My Comments</h4>
       
-      <?php
+      
            <form method='post' action='/blog-project/'>
            <fieldset>
              <textarea class='description' rows='10' cols='45' name='comment_text' id='comment_text'><?php if (isset($comment_text)) {
@@ -46,7 +46,7 @@ $navList = buildNav($categories);
          } ?>">
            </fieldset>
          </form> 
-       ?>
+       
     </main>
     <footer>
         <p>This website is used solely for educational purposes. | <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a> |

@@ -169,6 +169,7 @@ $action = filter_input(INPUT_POST, 'action');
       $toUpdate = getCommentById($commentId);
       if (!count($toUpdate)) {
         $_SESSION['message'] = "<p class='message'>Error. This comment cannot be updated at this time.</p>";
+        header('location: /blog-project/index.php/?action=viewComments');
         exit;
       } else {
         include 'view/comment-update.php';
